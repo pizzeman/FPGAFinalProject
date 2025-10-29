@@ -33,22 +33,17 @@ module SOC (
 
 `include "riscv_assembly.vh"
 
-    initial begin
-        PC = 0;
-        ADD(x0,x0,x0);
-        ADD(x1,x0,x0);
-        ADDI(x1,x1,1);
-        ADDI(x1,x1,1);
-        ADDI(x1,x1,1);
-        ADDI(x1,x1,3);
-        ADD(x2,x1,x0);
-        ADD(x3,x1,x2);
-        SRLI(x3,x3,3);
-        SLLI(x3,x3,31);
-        SRAI(x3,x3,5);
-        SRLI(x1,x3,26);
-        EBREAK();
-    end
+      integer L0_ = 8;
+   
+      initial begin
+         ADD(x1,x0,x0);
+         ADDI(x2,x0,9);
+        Label(L0_); 
+	    ADDI(x1,x1,1); 
+         BNE(x1, x2, LabelRef(L0_));
+         EBREAK();
+	 endASM();
+      end
 
     // See the table P. 105 in RISC-V manual
 
@@ -86,8 +81,6 @@ module SOC (
     reg [31:0] rs2;
     wire [31:0] writeBackData;
     wire        writeBackEn;
-   assign writeBackData = aluOut; 
-   assign writeBackEn = (state == EXECUTE && (isALUreg || isALUimm));   
 
     //The ALU
     wire [31:0] aluIn1 = rs1;
@@ -109,46 +102,71 @@ module SOC (
         endcase
     end
 
+   reg takeBranch;
+   always @(*) begin
+      case(funct3)
+	3'b000: takeBranch = (rs1 == rs2);
+	3'b001: takeBranch = (rs1 != rs2);
+	3'b100: takeBranch = ($signed(rs1) < $signed(rs2));
+	3'b101: takeBranch = ($signed(rs1) >= $signed(rs2));
+	3'b110: takeBranch = (rs1 < rs2);
+	3'b111: takeBranch = (rs1 >= rs2);
+	default: takeBranch = 1'b0;
+      endcase
+   end
+
     //Use a FSM to switch between fetch instruction, register and execute
     localparam FETCH_INSTR = 0;
     localparam FETCH_REGS  = 1;
     localparam EXECUTE     = 2;
     reg [1:0] state = FETCH_INSTR;
 
+    assign writeBackData = (isJAL || isJALR) ? (PC + 4) : aluOut;
+    assign writeBackEn = (state == EXECUTE && 
+            (isALUreg || 
+            isALUimm || 
+            isJAL    || 
+            isJALR)
+            );
+    wire [31:0] nextPC = (isBranch && takeBranch) ? PC+Bimm :	       
+                    isJAL                    ? PC+Jimm :
+                    isJALR                   ? rs1+Iimm :
+                    PC+4;
+
     always @(posedge clk) begin
     if(SW1) begin
-        PC    <= 0;
-        state <= FETCH_INSTR;
-        instr <= 32'b0000000_00000_00000_000_00000_0110011; // NOP
-    end else begin
-        //Continuously write back to registers
-        if(writeBackEn && rdId != 0) begin
-        RegisterBank[rdId] <= writeBackData;
-        LED1 <= writeBackData[0];
-        LED2 <= writeBackData[1];
-        LED3 <= writeBackData[2];
-        LED4 <= writeBackData[3];
-    end
-    
-    case(state)
-    FETCH_INSTR: begin
-        instr <= MEM[PC];
-        state <= FETCH_REGS;
-    end
-    FETCH_REGS: begin
-        rs1 <= RegisterBank[rs1Id];
-        rs2 <= RegisterBank[rs2Id];
-        state <= EXECUTE;
-    end
-    EXECUTE: begin
-        if(!isSYSTEM) begin
-        PC <= PC + 1;
-        end
-        state <= FETCH_INSTR;	          
-    end
-    endcase
-    end 
-    end 
+	 PC    <= 0;
+	 state <= FETCH_INSTR;
+      end else begin
+	 if(writeBackEn && rdId != 0) begin
+	    RegisterBank[rdId] <= writeBackData;
+	    // For displaying what happens.
+	    if(rdId == 1) begin
+	       LED1 = writeBackData[0];
+           LED2 = writeBackData[1];
+           LED3 = writeBackData[2];
+           LED4 = writeBackData[3];
+	    end	 
+	 end
+	 case(state)
+	   FETCH_INSTR: begin
+	      instr <= MEM[PC[31:2]];
+	      state <= FETCH_REGS;
+	   end
+	   FETCH_REGS: begin
+	      rs1 <= RegisterBank[rs1Id];
+	      rs2 <= RegisterBank[rs2Id];
+	      state <= EXECUTE;
+	   end
+	   EXECUTE: begin
+	      if(!isSYSTEM) begin
+		 PC <= nextPC;
+	      end
+	      state <= FETCH_INSTR;    
+	   end
+	 endcase 
+      end
+   end
     
     hexConverter hex_value_data(
         .bitin(PC),
