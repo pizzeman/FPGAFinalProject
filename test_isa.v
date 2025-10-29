@@ -31,7 +31,7 @@ module SOC (
     reg [31:0] PC;       // program counter
     reg [31:0] instr;    // current instruction
 
-`include "riscv_assembly.v"
+`include "riscv_assembly.vh"
 
     initial begin
         PC = 0;
@@ -40,7 +40,7 @@ module SOC (
         ADDI(x1,x1,1);
         ADDI(x1,x1,1);
         ADDI(x1,x1,1);
-        ADDI(x1,x1,1);
+        ADDI(x1,x1,3);
         ADD(x2,x1,x0);
         ADD(x3,x1,x2);
         SRLI(x3,x3,3);
