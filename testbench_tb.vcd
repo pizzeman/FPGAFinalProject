@@ -1,0 +1,882 @@
+$date
+	Wed Oct 29 22:16:06 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testbench $end
+$var parameter 32 ! NOP_CODEOP $end
+$var parameter 32 " RESET_XNOR3 $end
+$var parameter 33 # RESET_XOR3 $end
+$var parameter 32 $ a0 $end
+$var parameter 32 % a1 $end
+$var parameter 32 & a2 $end
+$var parameter 32 ' a3 $end
+$var parameter 32 ( a4 $end
+$var parameter 32 ) a5 $end
+$var parameter 32 * a6 $end
+$var parameter 32 + a7 $end
+$var parameter 32 , fp $end
+$var parameter 32 - gp $end
+$var parameter 32 . ra $end
+$var parameter 32 / s0 $end
+$var parameter 32 0 s1 $end
+$var parameter 32 1 s10 $end
+$var parameter 32 2 s11 $end
+$var parameter 32 3 s2 $end
+$var parameter 32 4 s3 $end
+$var parameter 32 5 s4 $end
+$var parameter 32 6 s5 $end
+$var parameter 32 7 s6 $end
+$var parameter 32 8 s7 $end
+$var parameter 32 9 s8 $end
+$var parameter 32 : s9 $end
+$var parameter 32 ; sp $end
+$var parameter 32 < t0 $end
+$var parameter 32 = t1 $end
+$var parameter 32 > t2 $end
+$var parameter 32 ? t3 $end
+$var parameter 32 @ t4 $end
+$var parameter 32 A t5 $end
+$var parameter 32 B t6 $end
+$var parameter 32 C tp $end
+$var parameter 32 D x0 $end
+$var parameter 32 E x1 $end
+$var parameter 32 F x10 $end
+$var parameter 32 G x11 $end
+$var parameter 32 H x12 $end
+$var parameter 32 I x13 $end
+$var parameter 32 J x14 $end
+$var parameter 32 K x15 $end
+$var parameter 32 L x16 $end
+$var parameter 32 M x17 $end
+$var parameter 32 N x18 $end
+$var parameter 32 O x19 $end
+$var parameter 32 P x2 $end
+$var parameter 32 Q x20 $end
+$var parameter 32 R x21 $end
+$var parameter 32 S x22 $end
+$var parameter 32 T x23 $end
+$var parameter 32 U x24 $end
+$var parameter 32 V x25 $end
+$var parameter 32 W x26 $end
+$var parameter 32 X x27 $end
+$var parameter 32 Y x28 $end
+$var parameter 32 Z x29 $end
+$var parameter 32 [ x3 $end
+$var parameter 32 \ x30 $end
+$var parameter 32 ] x31 $end
+$var parameter 32 ^ x4 $end
+$var parameter 32 _ x5 $end
+$var parameter 32 ` x6 $end
+$var parameter 32 a x7 $end
+$var parameter 32 b x8 $end
+$var parameter 32 c x9 $end
+$var parameter 32 d zero $end
+$var reg 1 e CLK $end
+$var reg 32 f mem_rdata [31:0] $end
+$var reg 1 g reset $end
+$var integer 32 h ASMerror [31:0] $end
+$var integer 32 i L0_ [31:0] $end
+$var integer 32 j memPC [31:0] $end
+$scope function LabelRef $end
+$var integer 32 k L [31:0] $end
+$upscope $end
+$scope module dut $end
+$var wire 32 l aluIn1 [31:0] $end
+$var wire 1 e clk $end
+$var wire 32 m mem_addr [31:0] $end
+$var wire 32 n mem_rdata [31:0] $end
+$var wire 1 g resetn $end
+$var wire 1 o writeBackEn $end
+$var wire 32 p writeBackData [31:0] $end
+$var wire 5 q shamt [4:0] $end
+$var wire 5 r rs2Id [4:0] $end
+$var wire 5 s rs1Id [4:0] $end
+$var wire 5 t rdId [4:0] $end
+$var wire 32 u nextPC [31:0] $end
+$var wire 1 v mem_rstrb $end
+$var wire 1 w isStore $end
+$var wire 1 x isSYSTEM $end
+$var wire 1 y isLoad $end
+$var wire 1 z isLUI $end
+$var wire 1 { isJALR $end
+$var wire 1 | isJAL $end
+$var wire 1 } isBranch $end
+$var wire 1 ~ isAUIPC $end
+$var wire 1 !" isALUreg $end
+$var wire 1 "" isALUimm $end
+$var wire 7 #" funct7 [6:0] $end
+$var wire 3 $" funct3 [2:0] $end
+$var wire 32 %" aluIn2 [31:0] $end
+$var wire 32 &" Uimm [31:0] $end
+$var wire 32 '" Simm [31:0] $end
+$var wire 32 (" Jimm [31:0] $end
+$var wire 32 )" Iimm [31:0] $end
+$var wire 32 *" Bimm [31:0] $end
+$var parameter 32 +" EXECUTE $end
+$var parameter 32 ," FETCH_INSTR $end
+$var parameter 32 -" FETCH_REGS $end
+$var parameter 32 ." WAIT_INSTR $end
+$var reg 32 /" PC [31:0] $end
+$var reg 32 0" aluOut [31:0] $end
+$var reg 32 1" instr [31:0] $end
+$var reg 32 2" rs1 [31:0] $end
+$var reg 32 3" rs2 [31:0] $end
+$var reg 2 4" state [1:0] $end
+$var reg 1 5" takeBranch $end
+$var reg 32 6" x1 [31:0] $end
+$upscope $end
+$scope task ADD $end
+$var reg 5 7" rd [4:0] $end
+$var reg 5 8" rs1 [4:0] $end
+$var reg 5 9" rs2 [4:0] $end
+$upscope $end
+$scope task ADDI $end
+$var reg 32 :" imm [31:0] $end
+$var reg 5 ;" rd [4:0] $end
+$var reg 5 <" rs1 [4:0] $end
+$upscope $end
+$scope task AND $end
+$var reg 5 =" rd [4:0] $end
+$var reg 5 >" rs1 [4:0] $end
+$var reg 5 ?" rs2 [4:0] $end
+$upscope $end
+$scope task ANDI $end
+$var reg 32 @" imm [31:0] $end
+$var reg 5 A" rd [4:0] $end
+$var reg 5 B" rs1 [4:0] $end
+$upscope $end
+$scope task AUIPC $end
+$var reg 32 C" imm [31:0] $end
+$var reg 5 D" rd [4:0] $end
+$upscope $end
+$scope task BEQ $end
+$var reg 32 E" imm [31:0] $end
+$var reg 5 F" rs1 [4:0] $end
+$var reg 5 G" rs2 [4:0] $end
+$upscope $end
+$scope task BEQZ $end
+$var reg 32 H" imm [31:0] $end
+$var reg 5 I" rs1 [4:0] $end
+$upscope $end
+$scope task BGE $end
+$var reg 32 J" imm [31:0] $end
+$var reg 5 K" rs1 [4:0] $end
+$var reg 5 L" rs2 [4:0] $end
+$upscope $end
+$scope task BGEU $end
+$var reg 32 M" imm [31:0] $end
+$var reg 5 N" rs1 [4:0] $end
+$var reg 5 O" rs2 [4:0] $end
+$upscope $end
+$scope task BGT $end
+$var reg 32 P" imm [31:0] $end
+$var reg 5 Q" rs1 [4:0] $end
+$var reg 5 R" rs2 [4:0] $end
+$upscope $end
+$scope task BLT $end
+$var reg 32 S" imm [31:0] $end
+$var reg 5 T" rs1 [4:0] $end
+$var reg 5 U" rs2 [4:0] $end
+$upscope $end
+$scope task BLTU $end
+$var reg 32 V" imm [31:0] $end
+$var reg 5 W" rs1 [4:0] $end
+$var reg 5 X" rs2 [4:0] $end
+$upscope $end
+$scope task BNE $end
+$var reg 32 Y" imm [31:0] $end
+$var reg 5 Z" rs1 [4:0] $end
+$var reg 5 [" rs2 [4:0] $end
+$upscope $end
+$scope task BNEZ $end
+$var reg 32 \" imm [31:0] $end
+$var reg 5 ]" rs1 [4:0] $end
+$upscope $end
+$scope task BType $end
+$var reg 3 ^" funct3 [2:0] $end
+$var reg 32 _" imm [31:0] $end
+$var reg 7 `" opcode [6:0] $end
+$var reg 5 a" rs1 [4:0] $end
+$var reg 5 b" rs2 [4:0] $end
+$upscope $end
+$scope task CALL $end
+$var reg 32 c" offset [31:0] $end
+$upscope $end
+$scope task CSRRC $end
+$var reg 12 d" csr [11:0] $end
+$var reg 5 e" rd [4:0] $end
+$var reg 5 f" rs1 [4:0] $end
+$upscope $end
+$scope task CSRRCI $end
+$var reg 12 g" csr [11:0] $end
+$var reg 32 h" imm [31:0] $end
+$var reg 5 i" rd [4:0] $end
+$upscope $end
+$scope task CSRRS $end
+$var reg 12 j" csr [11:0] $end
+$var reg 5 k" rd [4:0] $end
+$var reg 5 l" rs1 [4:0] $end
+$upscope $end
+$scope task CSRRSI $end
+$var reg 12 m" csr [11:0] $end
+$var reg 32 n" imm [31:0] $end
+$var reg 5 o" rd [4:0] $end
+$upscope $end
+$scope task CSRRW $end
+$var reg 12 p" csr [11:0] $end
+$var reg 5 q" rd [4:0] $end
+$var reg 5 r" rs1 [4:0] $end
+$upscope $end
+$scope task CSRRWI $end
+$var reg 12 s" csr [11:0] $end
+$var reg 32 t" imm [31:0] $end
+$var reg 5 u" rd [4:0] $end
+$upscope $end
+$scope task DATAB $end
+$var reg 8 v" b1 [7:0] $end
+$var reg 8 w" b2 [7:0] $end
+$var reg 8 x" b3 [7:0] $end
+$var reg 8 y" b4 [7:0] $end
+$upscope $end
+$scope task DATAW $end
+$var reg 32 z" w [31:0] $end
+$upscope $end
+$scope task EBREAK $end
+$upscope $end
+$scope task ECALL $end
+$upscope $end
+$scope task FENCE $end
+$var reg 4 {" pred [3:0] $end
+$var reg 4 |" succ [3:0] $end
+$upscope $end
+$scope task FENCE_I $end
+$upscope $end
+$scope task IType $end
+$var reg 3 }" funct3 [2:0] $end
+$var reg 32 ~" imm [31:0] $end
+$var reg 7 !# opcode [6:0] $end
+$var reg 5 "# rd [4:0] $end
+$var reg 5 ## rs1 [4:0] $end
+$upscope $end
+$scope task J $end
+$var reg 32 $# imm [31:0] $end
+$upscope $end
+$scope task JAL $end
+$var reg 32 %# imm [31:0] $end
+$var reg 5 &# rd [4:0] $end
+$upscope $end
+$scope task JALR $end
+$var reg 32 '# imm [31:0] $end
+$var reg 5 (# rd [4:0] $end
+$var reg 5 )# rs1 [4:0] $end
+$upscope $end
+$scope task JR $end
+$var reg 32 *# imm [31:0] $end
+$var reg 5 +# rs1 [4:0] $end
+$upscope $end
+$scope task JType $end
+$var reg 32 ,# imm [31:0] $end
+$var reg 7 -# opcode [6:0] $end
+$var reg 5 .# rd [4:0] $end
+$upscope $end
+$scope task LB $end
+$var reg 32 /# imm [31:0] $end
+$var reg 5 0# rd [4:0] $end
+$var reg 5 1# rs1 [4:0] $end
+$upscope $end
+$scope task LBU $end
+$var reg 32 2# imm [31:0] $end
+$var reg 5 3# rd [4:0] $end
+$var reg 5 4# rs1 [4:0] $end
+$upscope $end
+$scope task LH $end
+$var reg 32 5# imm [31:0] $end
+$var reg 5 6# rd [4:0] $end
+$var reg 5 7# rs1 [4:0] $end
+$upscope $end
+$scope task LHU $end
+$var reg 32 8# imm [31:0] $end
+$var reg 5 9# rd [4:0] $end
+$var reg 5 :# rs1 [4:0] $end
+$upscope $end
+$scope task LI $end
+$var reg 32 ;# imm [31:0] $end
+$var reg 5 <# rd [4:0] $end
+$upscope $end
+$scope task LUI $end
+$var reg 32 =# imm [31:0] $end
+$var reg 5 ># rd [4:0] $end
+$upscope $end
+$scope task LW $end
+$var reg 32 ?# imm [31:0] $end
+$var reg 5 @# rd [4:0] $end
+$var reg 5 A# rs1 [4:0] $end
+$upscope $end
+$scope task Label $end
+$var integer 32 B# L [31:0] $end
+$upscope $end
+$scope task MV $end
+$var reg 5 C# rd [4:0] $end
+$var reg 5 D# rs1 [4:0] $end
+$upscope $end
+$scope task NOP $end
+$upscope $end
+$scope task OR $end
+$var reg 5 E# rd [4:0] $end
+$var reg 5 F# rs1 [4:0] $end
+$var reg 5 G# rs2 [4:0] $end
+$upscope $end
+$scope task ORI $end
+$var reg 32 H# imm [31:0] $end
+$var reg 5 I# rd [4:0] $end
+$var reg 5 J# rs1 [4:0] $end
+$upscope $end
+$scope task RET $end
+$upscope $end
+$scope task RType $end
+$var reg 3 K# funct3 [2:0] $end
+$var reg 7 L# funct7 [6:0] $end
+$var reg 7 M# opcode [6:0] $end
+$var reg 5 N# rd [4:0] $end
+$var reg 5 O# rs1 [4:0] $end
+$var reg 5 P# rs2 [4:0] $end
+$upscope $end
+$scope task SB $end
+$var reg 32 Q# imm [31:0] $end
+$var reg 5 R# rs1 [4:0] $end
+$var reg 5 S# rs2 [4:0] $end
+$upscope $end
+$scope task SH $end
+$var reg 32 T# imm [31:0] $end
+$var reg 5 U# rs1 [4:0] $end
+$var reg 5 V# rs2 [4:0] $end
+$upscope $end
+$scope task SLL $end
+$var reg 5 W# rd [4:0] $end
+$var reg 5 X# rs1 [4:0] $end
+$var reg 5 Y# rs2 [4:0] $end
+$upscope $end
+$scope task SLLI $end
+$var reg 32 Z# imm [31:0] $end
+$var reg 5 [# rd [4:0] $end
+$var reg 5 \# rs1 [4:0] $end
+$upscope $end
+$scope task SLT $end
+$var reg 5 ]# rd [4:0] $end
+$var reg 5 ^# rs1 [4:0] $end
+$var reg 5 _# rs2 [4:0] $end
+$upscope $end
+$scope task SLTI $end
+$var reg 32 `# imm [31:0] $end
+$var reg 5 a# rd [4:0] $end
+$var reg 5 b# rs1 [4:0] $end
+$upscope $end
+$scope task SLTIU $end
+$var reg 32 c# imm [31:0] $end
+$var reg 5 d# rd [4:0] $end
+$var reg 5 e# rs1 [4:0] $end
+$upscope $end
+$scope task SLTU $end
+$var reg 5 f# rd [4:0] $end
+$var reg 5 g# rs1 [4:0] $end
+$var reg 5 h# rs2 [4:0] $end
+$upscope $end
+$scope task SRA $end
+$var reg 5 i# rd [4:0] $end
+$var reg 5 j# rs1 [4:0] $end
+$var reg 5 k# rs2 [4:0] $end
+$upscope $end
+$scope task SRAI $end
+$var reg 32 l# imm [31:0] $end
+$var reg 5 m# rd [4:0] $end
+$var reg 5 n# rs1 [4:0] $end
+$upscope $end
+$scope task SRL $end
+$var reg 5 o# rd [4:0] $end
+$var reg 5 p# rs1 [4:0] $end
+$var reg 5 q# rs2 [4:0] $end
+$upscope $end
+$scope task SRLI $end
+$var reg 32 r# imm [31:0] $end
+$var reg 5 s# rd [4:0] $end
+$var reg 5 t# rs1 [4:0] $end
+$upscope $end
+$scope task SType $end
+$var reg 3 u# funct3 [2:0] $end
+$var reg 32 v# imm [31:0] $end
+$var reg 7 w# opcode [6:0] $end
+$var reg 5 x# rs1 [4:0] $end
+$var reg 5 y# rs2 [4:0] $end
+$upscope $end
+$scope task SUB $end
+$var reg 5 z# rd [4:0] $end
+$var reg 5 {# rs1 [4:0] $end
+$var reg 5 |# rs2 [4:0] $end
+$upscope $end
+$scope task SW $end
+$var reg 32 }# imm [31:0] $end
+$var reg 5 ~# rs1 [4:0] $end
+$var reg 5 !$ rs2 [4:0] $end
+$upscope $end
+$scope task UType $end
+$var reg 32 "$ imm [31:0] $end
+$var reg 7 #$ opcode [6:0] $end
+$var reg 5 $$ rd [4:0] $end
+$upscope $end
+$scope task XOR $end
+$var reg 5 %$ rd [4:0] $end
+$var reg 5 &$ rs1 [4:0] $end
+$var reg 5 '$ rs2 [4:0] $end
+$upscope $end
+$scope task XORI $end
+$var reg 32 ($ imm [31:0] $end
+$var reg 5 )$ rd [4:0] $end
+$var reg 5 *$ rs1 [4:0] $end
+$upscope $end
+$scope task endASM $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 ."
+b10 -"
+b0 ,"
+b11 +"
+b0 d
+b1001 c
+b1000 b
+b111 a
+b110 `
+b101 _
+b100 ^
+b11111 ]
+b11110 \
+b11 [
+b11101 Z
+b11100 Y
+b11011 X
+b11010 W
+b11001 V
+b11000 U
+b10111 T
+b10110 S
+b10101 R
+b10100 Q
+b10 P
+b10011 O
+b10010 N
+b10001 M
+b10000 L
+b1111 K
+b1110 J
+b1101 I
+b1100 H
+b1011 G
+b1010 F
+b1 E
+b0 D
+b100 C
+b11111 B
+b11110 A
+b11101 @
+b11100 ?
+b111 >
+b110 =
+b101 <
+b10 ;
+b11001 :
+b11000 9
+b10111 8
+b10110 7
+b10101 6
+b10100 5
+b10011 4
+b10010 3
+b11011 2
+b11010 1
+b1001 0
+b1000 /
+b1 .
+b11 -
+b1000 ,
+b10001 +
+b10000 *
+b1111 )
+b1110 (
+b1101 '
+b1100 &
+b1011 %
+b1010 $
+b111 #
+b0 "
+b110011 !
+$end
+#0
+$dumpvars
+bx *$
+bx )$
+bx ($
+bx '$
+bx &$
+bx %$
+bx $$
+bx #$
+bx "$
+bx !$
+bx ~#
+bx }#
+bx |#
+bx {#
+bx z#
+bx y#
+bx x#
+bx w#
+bx v#
+bx u#
+bx t#
+bx s#
+bx r#
+bx q#
+bx p#
+bx o#
+bx n#
+bx m#
+bx l#
+bx k#
+bx j#
+bx i#
+bx h#
+bx g#
+bx f#
+bx e#
+bx d#
+bx c#
+bx b#
+bx a#
+bx `#
+bx _#
+bx ^#
+bx ]#
+bx \#
+bx [#
+bx Z#
+bx Y#
+bx X#
+bx W#
+bx V#
+bx U#
+bx T#
+bx S#
+bx R#
+bx Q#
+b0 P#
+b0 O#
+b1 N#
+b110011 M#
+b0 L#
+b0 K#
+bx J#
+bx I#
+bx H#
+bx G#
+bx F#
+bx E#
+bx D#
+bx C#
+bx B#
+bx A#
+bx @#
+bx ?#
+bx >#
+bx =#
+bx <#
+bx ;#
+bx :#
+bx 9#
+bx 8#
+bx 7#
+bx 6#
+bx 5#
+bx 4#
+bx 3#
+bx 2#
+bx 1#
+bx 0#
+bx /#
+bx .#
+bx -#
+bx ,#
+bx +#
+bx *#
+bx )#
+bx (#
+bx '#
+bx &#
+bx %#
+bx $#
+bx ##
+bx "#
+bx !#
+bx ~"
+bx }"
+bx |"
+bx {"
+bx z"
+bx y"
+bx x"
+bx w"
+bx v"
+bx u"
+bx t"
+bx s"
+bx r"
+bx q"
+bx p"
+bx o"
+bx n"
+bx m"
+bx l"
+bx k"
+bx j"
+bx i"
+bx h"
+bx g"
+bx f"
+bx e"
+bx d"
+bx c"
+bx b"
+bx a"
+bx `"
+bx _"
+bx ^"
+bx ]"
+bx \"
+bx ["
+bx Z"
+bx Y"
+bx X"
+bx W"
+bx V"
+bx U"
+bx T"
+bx S"
+bx R"
+bx Q"
+bx P"
+bx O"
+bx N"
+bx M"
+bx L"
+bx K"
+bx J"
+bx I"
+bx H"
+bx G"
+bx F"
+bx E"
+bx D"
+bx C"
+bx B"
+bx A"
+bx @"
+bx ?"
+bx >"
+bx ="
+bx <"
+bx ;"
+bx :"
+b0 9"
+b0 8"
+b1 7"
+bx 6"
+x5"
+b0 4"
+bx 3"
+bx 2"
+bx 1"
+bx 0"
+b0 /"
+bx0 *"
+bx )"
+bx0 ("
+bx '"
+bx000000000000 &"
+bx %"
+bx $"
+bx #"
+x""
+x!"
+x~
+x}
+x|
+x{
+xz
+xy
+xx
+xw
+1v
+bx u
+bx t
+bx s
+bx r
+bx q
+bx p
+0o
+bx n
+b0 m
+bx l
+bx k
+b100 j
+b1000 i
+b0 h
+1g
+bx f
+0e
+$end
+#20000
+0v
+b1 4"
+b10110011 f
+b10110011 n
+1e
+#40000
+0e
+#60000
+b100 u
+b100000000000 *"
+b0 ("
+b0 &"
+b0 )"
+b1 '"
+1!"
+0""
+0}
+0{
+0|
+0~
+0z
+0y
+0w
+0x
+b0 s
+b0 r
+b1 t
+b0 $"
+b0 #"
+b10 4"
+b10110011 1"
+1e
+#80000
+0e
+#100000
+1v
+b0 4"
+1e
+0g
+#120000
+0e
+#140000
+1e
+#160000
+0e
+#180000
+1e
+#200000
+0e
+#220000
+1e
+#240000
+0e
+#260000
+1e
+#280000
+0e
+#300000
+1e
+#320000
+0e
+#340000
+1e
+#360000
+0e
+#380000
+1e
+#400000
+0e
+#420000
+1e
+#440000
+0e
+#460000
+1e
+#480000
+0e
+#500000
+1e
+#520000
+0e
+#540000
+1e
+#560000
+0e
+#580000
+1e
+#600000
+0e
+#620000
+1e
+#640000
+0e
+#660000
+1e
+#680000
+0e
+#700000
+1e
+#720000
+0e
+#740000
+1e
+#760000
+0e
+#780000
+1e
+#800000
+0e
+#820000
+1e
+#840000
+0e
+#860000
+1e
+#880000
+0e
+#900000
+1e
+#920000
+0e
+#940000
+1e
+#960000
+0e
+#980000
+1e
+#1000000
+0e
+#1020000
+1e
+#1040000
+0e
+#1060000
+1e
+#1080000
+0e
+#1100000
+1e

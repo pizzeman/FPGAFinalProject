@@ -6,7 +6,7 @@ module hexConverter(
   output  d_output,
   output  e_output,
   output  f_output,
-  output  g_output,
+  output  g_output
 );
 
   assign a_output = !((!bitin[2] && !bitin[0]) || (bitin[3] && !bitin[0]) || (!bitin[3] && bitin[1]) || (bitin[2] && bitin[1]) || (bitin[3] && !bitin[2] && !bitin[1]) || (!bitin[3] && bitin[2] && bitin[0]));

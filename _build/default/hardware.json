@@ -23,7 +23,7 @@
         }
       },
       "cells": {
-        "$specify$1244": {
+        "$specify$1188": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -9969,7 +9969,7 @@
       "attributes": {
         "hdlname": "SOC",
         "top": "00000000000000000000000000000001",
-        "src": "test_isa.v:3.1-71.10"
+        "src": "test_isa.v:1.1-84.10"
       },
       "ports": {
         "CLK": {
@@ -9994,35 +9994,63 @@
         },
         "LED4": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ "x" ]
         },
         "S2_A": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_B": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_C": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_D": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_E": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_F": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "S2_G": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "1" ]
+        },
+        "S1_A": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "S1_B": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "S1_C": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "S1_D": {
+          "direction": "output",
+          "bits": [ "0" ]
+        },
+        "S1_E": {
+          "direction": "output",
+          "bits": [ "1" ]
+        },
+        "S1_F": {
+          "direction": "output",
+          "bits": [ "1" ]
+        },
+        "S1_G": {
+          "direction": "output",
+          "bits": [ "0" ]
         }
       },
       "cells": {
@@ -10034,7 +10062,7 @@
           },
           "attributes": {
             "cell_module_not_derived": "00000000000000000000000000000001",
-            "cell_src": "test_isa.v:35.15-43.6",
+            "cell_src": "test_isa.v:39.14-46.5",
             "module": "Processor",
             "module_hdlname": "Processor",
             "module_src": "processor.v:1.1-158.10"
@@ -10052,11 +10080,47 @@
           },
           "attributes": {
             "cell_module_not_derived": "00000000000000000000000000000001",
-            "cell_src": "test_isa.v:64.6-69.6",
-            "module": "$paramod\\Clockworks\\SLOW=s32'00000000000000000000000000010101",
+            "cell_src": "test_isa.v:55.5-60.5",
+            "module": "$paramod\\Clockworks\\SLOW=s32'00000000000000000000000000010011",
             "module_dynports": "00000000000000000000000000000001",
             "module_hdlname": "Clockworks",
             "module_src": "clockworks.v:1.1-15.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "Hex": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "test_isa.v:62.17-71.5",
+            "module": "hexConverter",
+            "module_hdlname": "hexConverter",
+            "module_src": "hex_converter.v:1.1-20.10"
+          },
+          "port_directions": {
+          },
+          "connections": {
+          }
+        },
+        "HexB": {
+          "hide_name": 0,
+          "type": "$scopeinfo",
+          "parameters": {
+            "TYPE": "module"
+          },
+          "attributes": {
+            "cell_module_not_derived": "00000000000000000000000000000001",
+            "cell_src": "test_isa.v:73.20-82.5",
+            "module": "hexConverter",
+            "module_hdlname": "hexConverter",
+            "module_src": "hex_converter.v:1.1-20.10"
           },
           "port_directions": {
           },
@@ -10071,28 +10135,10 @@
           },
           "attributes": {
             "cell_module_not_derived": "00000000000000000000000000000001",
-            "cell_src": "test_isa.v:22.12-27.6",
+            "cell_src": "test_isa.v:27.11-32.5",
             "module": "Memory",
             "module_hdlname": "Memory",
-            "module_src": "memory.v:1.1-25.10"
-          },
-          "port_directions": {
-          },
-          "connections": {
-          }
-        },
-        "hex_value_data": {
-          "hide_name": 0,
-          "type": "$scopeinfo",
-          "parameters": {
-            "TYPE": "module"
-          },
-          "attributes": {
-            "cell_module_not_derived": "00000000000000000000000000000001",
-            "cell_src": "test_isa.v:50.18-59.6",
-            "module": "hexConverter",
-            "module_hdlname": "hexConverter",
-            "module_src": "hex_converter.v:1.1-20.10"
+            "module_src": "memory.v:2.1-26.10"
           },
           "port_directions": {
           },
@@ -10105,7 +10151,7 @@
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
-            "src": "test_isa.v:4.12-4.15"
+            "src": "test_isa.v:2.12-2.15"
           }
         },
         "CPU.Bimm": {
@@ -10113,7 +10159,7 @@
           "bits": [ "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU Bimm",
-            "src": "processor.v:32.16-32.20"
+            "src": "processor.v:31.16-31.20"
           }
         },
         "CPU.Iimm": {
@@ -10121,7 +10167,7 @@
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU Iimm",
-            "src": "processor.v:30.16-30.20"
+            "src": "processor.v:29.16-29.20"
           }
         },
         "CPU.Jimm": {
@@ -10129,7 +10175,7 @@
           "bits": [ "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU Jimm",
-            "src": "processor.v:33.16-33.20"
+            "src": "processor.v:32.16-32.20"
           }
         },
         "CPU.PC": {
@@ -10137,7 +10183,7 @@
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
           "attributes": {
             "hdlname": "CPU PC",
-            "src": "processor.v:11.15-11.17"
+            "src": "processor.v:10.15-10.17"
           }
         },
         "CPU.Simm": {
@@ -10145,7 +10191,7 @@
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU Simm",
-            "src": "processor.v:31.16-31.20"
+            "src": "processor.v:30.16-30.20"
           }
         },
         "CPU.Uimm": {
@@ -10153,7 +10199,7 @@
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU Uimm",
-            "src": "processor.v:29.16-29.20"
+            "src": "processor.v:28.16-28.20"
           }
         },
         "CPU.funct3": {
@@ -10161,7 +10207,7 @@
           "bits": [ "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU funct3",
-            "src": "processor.v:41.15-41.21"
+            "src": "processor.v:40.15-40.21"
           }
         },
         "CPU.funct7": {
@@ -10169,7 +10215,7 @@
           "bits": [ "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU funct7",
-            "src": "processor.v:42.15-42.21"
+            "src": "processor.v:41.15-41.21"
           }
         },
         "CPU.instr": {
@@ -10177,63 +10223,7 @@
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU instr",
-            "src": "processor.v:12.15-12.20"
-          }
-        },
-        "CPU.inter_pc": {
-          "hide_name": 0,
-          "bits": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
-          "attributes": {
-            "hdlname": "CPU inter_pc",
-            "src": "processor.v:7.25-7.33"
-          }
-        },
-        "CPU.isALUreg": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isALUreg",
-            "src": "processor.v:17.9-17.17"
-          }
-        },
-        "CPU.isAUIPC": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isAUIPC",
-            "src": "processor.v:22.9-22.16"
-          }
-        },
-        "CPU.isBranch": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isBranch",
-            "src": "processor.v:19.9-19.17"
-          }
-        },
-        "CPU.isJAL": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isJAL",
-            "src": "processor.v:21.9-21.14"
-          }
-        },
-        "CPU.isJALR": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isJALR",
-            "src": "processor.v:20.9-20.15"
-          }
-        },
-        "CPU.isLUI": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "CPU isLUI",
-            "src": "processor.v:23.9-23.14"
+            "src": "processor.v:11.15-11.20"
           }
         },
         "CPU.mem_addr": {
@@ -10252,20 +10242,12 @@
             "src": "processor.v:5.23-5.32"
           }
         },
-        "CPU.nextPC": {
-          "hide_name": 0,
-          "bits": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
-          "attributes": {
-            "hdlname": "CPU nextPC",
-            "src": "processor.v:116.16-116.22"
-          }
-        },
         "CPU.rdId": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU rdId",
-            "src": "processor.v:38.15-38.19"
+            "src": "processor.v:37.15-37.19"
           }
         },
         "CPU.resetn": {
@@ -10281,7 +10263,7 @@
           "bits": [ "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU rs1Id",
-            "src": "processor.v:36.15-36.20"
+            "src": "processor.v:35.15-35.20"
           }
         },
         "CPU.rs2Id": {
@@ -10289,7 +10271,7 @@
           "bits": [ "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU rs2Id",
-            "src": "processor.v:37.15-37.20"
+            "src": "processor.v:36.15-36.20"
           }
         },
         "CPU.state": {
@@ -10297,7 +10279,7 @@
           "bits": [ "0", "0" ],
           "attributes": {
             "hdlname": "CPU state",
-            "src": "processor.v:99.14-99.19"
+            "src": "processor.v:98.14-98.19"
           }
         },
         "CPU.x1": {
@@ -10305,7 +10287,7 @@
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU x1",
-            "src": "processor.v:8.19-8.21"
+            "src": "processor.v:7.23-7.25"
           }
         },
         "CW.CLK": {
@@ -10334,32 +10316,160 @@
             "src": "clockworks.v:6.11-6.17"
           }
         },
+        "Hex.a_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex a_output",
+            "src": "hex_converter.v:3.11-3.19"
+          }
+        },
+        "Hex.b_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex b_output",
+            "src": "hex_converter.v:4.11-4.19"
+          }
+        },
+        "Hex.bitin": {
+          "hide_name": 0,
+          "bits": [ "0", "0", "0", "0" ],
+          "attributes": {
+            "hdlname": "Hex bitin",
+            "src": "hex_converter.v:2.16-2.21"
+          }
+        },
+        "Hex.c_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex c_output",
+            "src": "hex_converter.v:5.11-5.19"
+          }
+        },
+        "Hex.d_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex d_output",
+            "src": "hex_converter.v:6.11-6.19"
+          }
+        },
+        "Hex.e_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex e_output",
+            "src": "hex_converter.v:7.11-7.19"
+          }
+        },
+        "Hex.f_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "Hex f_output",
+            "src": "hex_converter.v:8.11-8.19"
+          }
+        },
+        "Hex.g_output": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "Hex g_output",
+            "src": "hex_converter.v:9.11-9.19"
+          }
+        },
+        "HexB.a_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "HexB a_output",
+            "src": "hex_converter.v:3.11-3.19"
+          }
+        },
+        "HexB.b_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "HexB b_output",
+            "src": "hex_converter.v:4.11-4.19"
+          }
+        },
+        "HexB.bitin": {
+          "hide_name": 0,
+          "bits": [ "1", "1", "0", "0" ],
+          "attributes": {
+            "hdlname": "HexB bitin",
+            "src": "hex_converter.v:2.16-2.21"
+          }
+        },
+        "HexB.c_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "HexB c_output",
+            "src": "hex_converter.v:5.11-5.19"
+          }
+        },
+        "HexB.d_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "HexB d_output",
+            "src": "hex_converter.v:6.11-6.19"
+          }
+        },
+        "HexB.e_output": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "HexB e_output",
+            "src": "hex_converter.v:7.11-7.19"
+          }
+        },
+        "HexB.f_output": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "HexB f_output",
+            "src": "hex_converter.v:8.11-8.19"
+          }
+        },
+        "HexB.g_output": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "HexB g_output",
+            "src": "hex_converter.v:9.11-9.19"
+          }
+        },
         "LED1": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "test_isa.v:6.12-6.16"
+            "src": "test_isa.v:4.12-4.16"
           }
         },
         "LED2": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "test_isa.v:7.12-7.16"
+            "src": "test_isa.v:5.12-5.16"
           }
         },
         "LED3": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "test_isa.v:8.12-8.16"
+            "src": "test_isa.v:6.12-6.16"
           }
         },
         "LED4": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ "x" ],
           "attributes": {
-            "src": "test_isa.v:9.12-9.16"
+            "src": "test_isa.v:7.12-7.16"
           }
         },
         "RAM.ASMerror": {
@@ -10371,11 +10481,11 @@
             "src": "riscv_assembly.vh:604.12-604.20"
           }
         },
-        "RAM.BNE$func$memory.v:15$591.imm": {
+        "RAM.BNE$func$memory.v:16$591.imm": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
-            "hdlname": "RAM BNE$func$memory.v:15$591.imm",
+            "hdlname": "RAM BNE$func$memory.v:16$591.imm",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:321.17-321.20"
           }
@@ -10395,25 +10505,25 @@
           "signed": 1,
           "attributes": {
             "hdlname": "RAM L0_",
-            "src": "memory.v:10.12-10.15"
+            "src": "memory.v:11.12-11.15"
           }
         },
-        "RAM.Label$func$memory.v:14$587.L": {
+        "RAM.Label$func$memory.v:15$587.L": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "signed": 1,
           "attributes": {
-            "hdlname": "RAM Label$func$memory.v:14$587.L",
+            "hdlname": "RAM Label$func$memory.v:15$587.L",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:607.21-607.22"
           }
         },
-        "RAM.LabelRef$func$memory.v:15$590.L": {
+        "RAM.LabelRef$func$memory.v:16$590.L": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "signed": 1,
           "attributes": {
-            "hdlname": "RAM LabelRef$func$memory.v:15$590.L",
+            "hdlname": "RAM LabelRef$func$memory.v:16$590.L",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:624.21-624.22"
           }
@@ -10432,7 +10542,7 @@
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
           "attributes": {
             "hdlname": "RAM mem_addr",
-            "src": "memory.v:3.22-3.30"
+            "src": "memory.v:4.22-4.30"
           }
         },
         "RAM.mem_rdata": {
@@ -10440,162 +10550,139 @@
           "bits": [ "1", "1", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "0", "0", "x", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "RAM mem_rdata",
-            "src": "memory.v:4.22-4.31"
+            "src": "memory.v:5.22-5.31"
           }
         },
-        "S2_A": {
+        "S1_A": {
           "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "src": "test_isa.v:10.12-10.16"
-          }
-        },
-        "S2_B": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "src": "test_isa.v:11.12-11.16"
-          }
-        },
-        "S2_C": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "src": "test_isa.v:12.12-12.16"
-          }
-        },
-        "S2_D": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "src": "test_isa.v:13.12-13.16"
-          }
-        },
-        "S2_E": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "src": "test_isa.v:14.12-14.16"
-          }
-        },
-        "S2_F": {
-          "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "0" ],
           "attributes": {
             "src": "test_isa.v:15.12-15.16"
           }
         },
-        "S2_G": {
+        "S1_B": {
           "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "0" ],
           "attributes": {
             "src": "test_isa.v:16.12-16.16"
+          }
+        },
+        "S1_C": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:17.12-17.16"
+          }
+        },
+        "S1_D": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:18.12-18.16"
+          }
+        },
+        "S1_E": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "test_isa.v:19.12-19.16"
+          }
+        },
+        "S1_F": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "test_isa.v:20.12-20.16"
+          }
+        },
+        "S1_G": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:21.12-21.16"
+          }
+        },
+        "S2_A": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:8.12-8.16"
+          }
+        },
+        "S2_B": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:9.12-9.16"
+          }
+        },
+        "S2_C": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:10.12-10.16"
+          }
+        },
+        "S2_D": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:11.12-11.16"
+          }
+        },
+        "S2_E": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:12.12-12.16"
+          }
+        },
+        "S2_F": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "test_isa.v:13.12-13.16"
+          }
+        },
+        "S2_G": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "test_isa.v:14.12-14.16"
           }
         },
         "SW1": {
           "hide_name": 0,
           "bits": [ 3 ],
           "attributes": {
-            "src": "test_isa.v:5.12-5.15"
-          }
-        },
-        "hex_value_data.a_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data a_output",
-            "src": "hex_converter.v:3.11-3.19"
-          }
-        },
-        "hex_value_data.b_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data b_output",
-            "src": "hex_converter.v:4.11-4.19"
-          }
-        },
-        "hex_value_data.bitin": {
-          "hide_name": 0,
-          "bits": [ "x", "x", "x", "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data bitin",
-            "src": "hex_converter.v:2.16-2.21"
-          }
-        },
-        "hex_value_data.c_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data c_output",
-            "src": "hex_converter.v:5.11-5.19"
-          }
-        },
-        "hex_value_data.d_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data d_output",
-            "src": "hex_converter.v:6.11-6.19"
-          }
-        },
-        "hex_value_data.e_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data e_output",
-            "src": "hex_converter.v:7.11-7.19"
-          }
-        },
-        "hex_value_data.f_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data f_output",
-            "src": "hex_converter.v:8.11-8.19"
-          }
-        },
-        "hex_value_data.g_output": {
-          "hide_name": 0,
-          "bits": [ "x" ],
-          "attributes": {
-            "hdlname": "hex_value_data g_output",
-            "src": "hex_converter.v:9.11-9.19"
-          }
-        },
-        "inter_pc": {
-          "hide_name": 0,
-          "bits": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
-          "attributes": {
-            "src": "test_isa.v:33.17-33.25"
+            "src": "test_isa.v:3.12-3.15"
           }
         },
         "mem_addr": {
           "hide_name": 0,
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
           "attributes": {
-            "src": "test_isa.v:29.17-29.25"
+            "src": "test_isa.v:34.16-34.24"
           }
         },
         "mem_rdata": {
           "hide_name": 0,
           "bits": [ "1", "1", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "0", "0", "x", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
-            "src": "test_isa.v:30.17-30.26"
+            "src": "test_isa.v:35.16-35.25"
           }
         },
         "resetn": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
-            "src": "test_isa.v:20.10-20.16"
+            "src": "test_isa.v:25.12-25.18"
           }
         },
         "x1": {
           "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "x", "x", "x", "x" ],
           "attributes": {
-            "src": "test_isa.v:32.17-32.19"
           }
         }
       }

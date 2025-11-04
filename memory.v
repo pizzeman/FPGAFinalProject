@@ -1,3 +1,4 @@
+`default_nettype none
 module Memory (
    input             clk,
    input      [31:0] mem_addr,  // address to be read

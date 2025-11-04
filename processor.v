@@ -4,8 +4,7 @@ module Processor (
     output     [31:0] mem_addr, 
     input      [31:0] mem_rdata, 
     output 	      mem_rstrb,
-    output reg [31:0]   inter_pc,
-    output [31:0] x1
+    output reg [31:0] x1		  
 );
 
    reg [31:0] PC=0;        // program counter
@@ -46,9 +45,9 @@ module Processor (
    reg [31:0] rs1; // value of source
    reg [31:0] rs2; //  registers.
    wire [31:0] writeBackData; // data to be written to rd
-   wire        writeBackEn;   // asserted if data should be written to rd
+   wire        writeBackEn;   // asserted if data should be written to rd 
 
-      // The ALU
+   // The ALU
    wire [31:0] aluIn1 = rs1;
    wire [31:0] aluIn2 = isALUreg ? rs2 : Iimm;
    reg [31:0] aluOut;
@@ -117,42 +116,43 @@ module Processor (
    	                isJAL                    ? PC+Jimm  :
 	                isJALR                   ? rs1+Iimm :
 	                PC+4;
-    assign inter_pc = nextPC;
-    always @(posedge clk) begin
-    if(!resetn) begin
-        PC    <= 0;
-        state <= FETCH_INSTR;
-        end else begin
-            if (writeBackEn && rdId != 0) begin
-            RegisterBank[rdId] <= writeBackData;
-            // For displaying what happens.
-            if (rdId == 1) begin
-                x1 <= writeBackData;
-        end
-        end
-        case(state)
-        FETCH_INSTR: begin
-            state <= WAIT_INSTR;
-        end
-        WAIT_INSTR: begin
-            instr <= mem_rdata;
-            state <= FETCH_REGS;
-        end
-        FETCH_REGS: begin
-            rs1 <= RegisterBank[rs1Id];
-            rs2 <= RegisterBank[rs2Id];
-            state <= EXECUTE;
-        end
-        EXECUTE: begin
-            if(!isSYSTEM) begin
-            PC <= nextPC;
-            end
-            state <= FETCH_INSTR;    
-        end
-        endcase 
-        end
-    end
+   
+   always @(posedge clk) begin
+      if(!resetn) begin
+	 PC    <= 0;
+	 state <= FETCH_INSTR;
+      end else begin
+	 if(writeBackEn && rdId != 0) begin
+	    RegisterBank[rdId] <= writeBackData;
+	    // For displaying what happens.
+	    if(rdId == 1) begin
+	       x1 <= writeBackData;
+	    end 
+	 end
+	 case(state)
+	   FETCH_INSTR: begin
+	      state <= WAIT_INSTR;
+	   end
+	   WAIT_INSTR: begin
+	      instr <= mem_rdata;
+	      state <= FETCH_REGS;
+	   end
+	   FETCH_REGS: begin
+	      rs1 <= RegisterBank[rs1Id];
+	      rs2 <= RegisterBank[rs2Id];
+	      state <= EXECUTE;
+	   end
+	   EXECUTE: begin
+	      if(!isSYSTEM) begin
+		 PC <= nextPC;
+	      end
+	      state <= FETCH_INSTR; 
+	   end
+	 endcase 
+      end
+   end
 
    assign mem_addr = PC;
-   assign mem_rstrb = (state == FETCH_INSTR);
+   assign mem_rstrb = (state == FETCH_INSTR);     
+   
 endmodule
