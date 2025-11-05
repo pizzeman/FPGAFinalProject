@@ -45,7 +45,16 @@ module Processor (
    reg [31:0] rs1; // value of source
    reg [31:0] rs2; //  registers.
    wire [31:0] writeBackData; // data to be written to rd
-   wire        writeBackEn;   // asserted if data should be written to rd 
+   wire        writeBackEn;   // asserted if data should be written to rd
+
+`ifdef BENCH   
+   integer     i;
+   initial begin
+      for(i=0; i<32; ++i) begin
+	 RegisterBank[i] = 0;
+      end
+   end
+`endif   
 
    // The ALU
    wire [31:0] aluIn1 = rs1;
@@ -127,7 +136,10 @@ module Processor (
 	    // For displaying what happens.
 	    if(rdId == 1) begin
 	       x1 <= writeBackData;
-	    end 
+	    end
+`ifdef BENCH	 
+	    $display("x%0d <= %b",rdId,writeBackData);
+`endif	 
 	 end
 	 case(state)
 	   FETCH_INSTR: begin
@@ -146,13 +158,44 @@ module Processor (
 	      if(!isSYSTEM) begin
 		 PC <= nextPC;
 	      end
-	      state <= FETCH_INSTR; 
+	      state <= FETCH_INSTR;
+`ifdef BENCH      
+	      if(isSYSTEM) $finish();
+`endif      
 	   end
 	 endcase 
       end
    end
 
    assign mem_addr = PC;
-   assign mem_rstrb = (state == FETCH_INSTR);     
+   assign mem_rstrb = (state == FETCH_INSTR);
+   
+`ifdef BENCH
+   always @(posedge clk) begin
+      if(state == FETCH_REGS) begin
+	 case (1'b1)
+	   isALUreg: $display(
+			      "ALUreg rd=%d rs1=%d rs2=%d funct3=%b",
+			      rdId, rs1Id, rs2Id, funct3
+			      );
+	   isALUimm: $display(
+			      "ALUimm rd=%d rs1=%d imm=%0d funct3=%b",
+			      rdId, rs1Id, Iimm, funct3
+			      );
+	   isBranch: $display("BRANCH rs1=%0d rs2=%0d",rs1Id, rs2Id);
+	   isJAL:    $display("JAL");
+	   isJALR:   $display("JALR");
+	   isAUIPC:  $display("AUIPC");
+	   isLUI:    $display("LUI");	
+	   isLoad:   $display("LOAD");
+	   isStore:  $display("STORE");
+	   isSYSTEM: $display("SYSTEM");
+	 endcase 
+	 if(isSYSTEM) begin
+	    $finish();
+	 end
+      end 
+   end
+`endif	      
    
 endmodule

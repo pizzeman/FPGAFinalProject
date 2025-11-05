@@ -24,17 +24,17 @@ module SOC (
    wire    clk;
    wire    resetn;
 
+   wire [31:0] mem_addr;
+   wire [31:0] mem_rdata;
+   wire mem_rstrb;
+   wire [31:0] x1;
+
    Memory RAM(
       .clk(clk),
       .mem_addr(mem_addr),
       .mem_rdata(mem_rdata),
       .mem_rstrb(mem_rstrb)
    );
-
-   wire [31:0] mem_addr;
-   wire [31:0] mem_rdata;
-   wire mem_rstrb;
-   wire [31:0] x1;
 
    Processor CPU(
       .clk(clk),
@@ -44,10 +44,10 @@ module SOC (
       .mem_rstrb(mem_rstrb),
       .x1(x1)		 
    );
-   assign LED1 = x1[0];
-   assign LED2 = x1[1];
-   assign LED3 = x1[2];
-   assign LED4 = x1[3];
+   assign LED1 = mem_addr[0];
+   assign LED2 = mem_addr[1];
+   assign LED3 = mem_addr[2];
+   assign LED4 = mem_addr[3];
 
    // Gearbox and reset circuitry.
    Clockworks #(

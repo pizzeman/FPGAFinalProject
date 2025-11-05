@@ -3,7 +3,7 @@
   "modules": {
     "$__ABC9_DELAY": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000011",
+        "abc9_box_id": "00000000000000000000000000001011",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -23,7 +23,7 @@
         }
       },
       "cells": {
-        "$specify$1188": {
+        "$specify$1348": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -121,7 +121,7 @@
     },
     "$__DFF_N__$abc9_flop": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000010",
+        "abc9_box_id": "00000000000000000000000000001010",
         "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
@@ -181,7 +181,7 @@
     },
     "$__DFF_P__$abc9_flop": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000001",
+        "abc9_box_id": "00000000000000000000000000001001",
         "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
@@ -241,7 +241,7 @@
     },
     "$__ICE40_CARRY_WRAPPER": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000100",
+        "abc9_box_id": "00000000000000000000000000001101",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -333,6 +333,1283 @@
           "bits": [ 3 ],
           "attributes": {
             "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:5.9-5.10"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000000010101": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000001000",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000000010101"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000000010101",
+            "T_FALL_MIN": "00000000000000000000000000010101",
+            "T_FALL_TYP": "00000000000000000000000000010101",
+            "T_RISE_MAX": "00000000000000000000000000010101",
+            "T_RISE_MIN": "00000000000000000000000000010101",
+            "T_RISE_TYP": "00000000000000000000000000010101"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000001100010": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000100",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000001100010"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000001100010",
+            "T_FALL_MIN": "00000000000000000000000001100010",
+            "T_FALL_TYP": "00000000000000000000000001100010",
+            "T_RISE_MAX": "00000000000000000000000001100010",
+            "T_RISE_MIN": "00000000000000000000000001100010",
+            "T_RISE_TYP": "00000000000000000000000001100010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000010000101": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000001",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000010000101"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000010000101",
+            "T_FALL_MIN": "00000000000000000000000010000101",
+            "T_FALL_TYP": "00000000000000000000000010000101",
+            "T_RISE_MAX": "00000000000000000000000010000101",
+            "T_RISE_MIN": "00000000000000000000000010000101",
+            "T_RISE_TYP": "00000000000000000000000010000101"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000010100001": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000010",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000010100001"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000010100001",
+            "T_FALL_MIN": "00000000000000000000000010100001",
+            "T_FALL_TYP": "00000000000000000000000010100001",
+            "T_RISE_MAX": "00000000000000000000000010100001",
+            "T_RISE_MIN": "00000000000000000000000010100001",
+            "T_RISE_TYP": "00000000000000000000000010100001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000011001011": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000110",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000011001011"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000011001011",
+            "T_FALL_MIN": "00000000000000000000000011001011",
+            "T_FALL_TYP": "00000000000000000000000011001011",
+            "T_RISE_MAX": "00000000000000000000000011001011",
+            "T_RISE_MIN": "00000000000000000000000011001011",
+            "T_RISE_TYP": "00000000000000000000000011001011"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000011100000": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000011",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000011100000"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000011100000",
+            "T_FALL_MIN": "00000000000000000000000011100000",
+            "T_FALL_TYP": "00000000000000000000000011100000",
+            "T_RISE_MAX": "00000000000000000000000011100000",
+            "T_RISE_MIN": "00000000000000000000000011100000",
+            "T_RISE_TYP": "00000000000000000000000011100000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000100001011": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000101",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000100001011"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000100001011",
+            "T_FALL_MIN": "00000000000000000000000100001011",
+            "T_FALL_TYP": "00000000000000000000000100001011",
+            "T_RISE_MAX": "00000000000000000000000100001011",
+            "T_RISE_MIN": "00000000000000000000000100001011",
+            "T_RISE_TYP": "00000000000000000000000100001011"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ABC9_DELAY\\DELAY=32'00000000000000000000000100010010": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000000111",
+        "hdlname": "__ABC9_DELAY",
+        "blackbox": "00000000000000000000000000000001",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.1-7.10"
+      },
+      "parameter_default_values": {
+        "DELAY": "00000000000000000000000100010010"
+      },
+      "ports": {
+        "I": {
+          "direction": "input",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        }
+      },
+      "cells": {
+        "$specify$1348": {
+          "hide_name": 1,
+          "type": "$specify2",
+          "parameters": {
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "FULL": "0",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000000100010010",
+            "T_FALL_MIN": "00000000000000000000000100010010",
+            "T_FALL_TYP": "00000000000000000000000100010010",
+            "T_RISE_MAX": "00000000000000000000000100010010",
+            "T_RISE_MIN": "00000000000000000000000100010010",
+            "T_RISE_TYP": "00000000000000000000000100010010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:5.5-5.22"
+          },
+          "port_directions": {
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DST": [ 3 ],
+            "EN": [ "1" ],
+            "SRC": [ 2 ]
+          }
+        }
+      },
+      "netnames": {
+        "I": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.29-2.30"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/abc9_model.v:2.39-2.40"
+          }
+        }
+      }
+    },
+    "$paramod$__ICE40_CARRY_WRAPPER\\LUT=16'0110100110010110\\I3_IS_CI=1'1": {
+      "attributes": {
+        "abc9_box_id": "00000000000000000000000000001100",
+        "blackbox": "00000000000000000000000000000001",
+        "hdlname": "__ICE40_CARRY_WRAPPER",
+        "abc9_box": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:2.1-86.10"
+      },
+      "parameter_default_values": {
+        "I3_IS_CI": "1",
+        "LUT": "0110100110010110"
+      },
+      "ports": {
+        "CO": {
+          "direction": "output",
+          "bits": [ 2 ]
+        },
+        "O": {
+          "direction": "output",
+          "bits": [ 3 ]
+        },
+        "A": {
+          "direction": "input",
+          "bits": [ 4 ]
+        },
+        "B": {
+          "direction": "input",
+          "bits": [ 5 ]
+        },
+        "CI": {
+          "direction": "input",
+          "bits": [ 6 ]
+        },
+        "I0": {
+          "direction": "input",
+          "bits": [ 7 ]
+        },
+        "I3": {
+          "direction": "input",
+          "bits": [ 8 ]
+        }
+      },
+      "cells": {
+      },
+      "netnames": {
+        "A": {
+          "hide_name": 0,
+          "bits": [ 4 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:6.8-6.9"
+          }
+        },
+        "B": {
+          "hide_name": 0,
+          "bits": [ 5 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:6.11-6.12"
+          }
+        },
+        "CI": {
+          "hide_name": 0,
+          "bits": [ 6 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:8.8-8.10"
+          }
+        },
+        "CO": {
+          "hide_name": 0,
+          "bits": [ 2 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "I0": {
+          "hide_name": 0,
+          "bits": [ 7 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:9.8-9.10"
+          }
+        },
+        "I3": {
+          "hide_name": 0,
+          "bits": [ 8 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:9.12-9.14"
+          }
+        },
+        "O": {
+          "hide_name": 0,
+          "bits": [ 3 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:5.9-5.10"
+          }
+        }
+      }
+    },
+    "$paramod$d6be1646dfb473ae4f56e830c6f3a6d0a24961af\\SB_RAM40_4K": {
+      "attributes": {
+        "hdlname": "SB_RAM40_4K",
+        "blackbox": "00000000000000000000000000000001",
+        "cells_not_processed": "00000000000000000000000000000001",
+        "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1487.1-1724.10"
+      },
+      "parameter_default_values": {
+        "INIT_0": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001100000000101010111101010011000001100110100100000110011110010000001000101001000010000000101001011100110101101000101010000010100000000110100100001000001010010",
+        "INIT_1": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_2": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_3": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_4": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_5": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_6": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_7": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_8": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_9": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_A": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_B": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_C": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_D": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_E": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_F": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "INIT_FILE": " ",
+        "READ_MODE": "00",
+        "WRITE_MODE": "01"
+      },
+      "ports": {
+        "RDATA": {
+          "direction": "output",
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ]
+        },
+        "RCLK": {
+          "direction": "input",
+          "bits": [ 18 ]
+        },
+        "RCLKE": {
+          "direction": "input",
+          "bits": [ 19 ]
+        },
+        "RE": {
+          "direction": "input",
+          "bits": [ 20 ]
+        },
+        "RADDR": {
+          "direction": "input",
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ]
+        },
+        "WCLK": {
+          "direction": "input",
+          "bits": [ 32 ]
+        },
+        "WCLKE": {
+          "direction": "input",
+          "bits": [ 33 ]
+        },
+        "WE": {
+          "direction": "input",
+          "bits": [ 34 ]
+        },
+        "WADDR": {
+          "direction": "input",
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ]
+        },
+        "MASK": {
+          "direction": "input",
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ]
+        },
+        "WDATA": {
+          "direction": "input",
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ]
+        }
+      },
+      "cells": {
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1661$1267": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1661.33-1661.44"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 33 ],
+            "Y": [ 78 ]
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1663$1268": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1663.34-1663.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 20 ],
+            "B": [ 19 ],
+            "Y": [ 79 ]
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1669$1269": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1669.34-1669.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 33 ],
+            "Y": [ 80 ]
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1673$1270": {
+          "hide_name": 1,
+          "type": "$logic_and",
+          "parameters": {
+            "A_SIGNED": "00000000000000000000000000000000",
+            "A_WIDTH": "00000000000000000000000000000001",
+            "B_SIGNED": "00000000000000000000000000000000",
+            "B_WIDTH": "00000000000000000000000000000001",
+            "Y_WIDTH": "00000000000000000000000000000001"
+          },
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1673.34-1673.45"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "Y": "output"
+          },
+          "connections": {
+            "A": [ 34 ],
+            "B": [ 33 ],
+            "Y": [ 81 ]
+          }
+        },
+        "$specify$90": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000010000",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000100010010",
+            "T_LIMIT_MIN": "00000000000000000000000100010010",
+            "T_LIMIT_TYP": "00000000000000000000000100010010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1661.3-1661.51"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 32 ],
+            "DST_EN": [ 78 ],
+            "SRC": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$91": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000001011",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000011001011",
+            "T_LIMIT_MIN": "00000000000000000000000011001011",
+            "T_LIMIT_TYP": "00000000000000000000000011001011"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1663.3-1663.52"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 18 ],
+            "DST_EN": [ 79 ],
+            "SRC": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$92": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000100001011",
+            "T_LIMIT_MIN": "00000000000000000000000100001011",
+            "T_LIMIT_TYP": "00000000000000000000000100001011"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1665.3-1665.36"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 18 ],
+            "DST_EN": [ "1" ],
+            "SRC": [ 19 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$93": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000001100010",
+            "T_LIMIT_MIN": "00000000000000000000000001100010",
+            "T_LIMIT_TYP": "00000000000000000000000001100010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1667.3-1667.32"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 18 ],
+            "DST_EN": [ "1" ],
+            "SRC": [ 20 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$94": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000001011",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000011100000",
+            "T_LIMIT_MIN": "00000000000000000000000011100000",
+            "T_LIMIT_TYP": "00000000000000000000000011100000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1669.3-1669.52"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 32 ],
+            "DST_EN": [ 80 ],
+            "SRC": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$95": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000100001011",
+            "T_LIMIT_MIN": "00000000000000000000000100001011",
+            "T_LIMIT_TYP": "00000000000000000000000100001011"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1671.3-1671.36"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 32 ],
+            "DST_EN": [ "1" ],
+            "SRC": [ 33 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$96": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000010000",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000010100001",
+            "T_LIMIT_MIN": "00000000000000000000000010100001",
+            "T_LIMIT_TYP": "00000000000000000000000010100001"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1673.3-1673.52"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 32 ],
+            "DST_EN": [ 81 ],
+            "SRC": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$97": {
+          "hide_name": 1,
+          "type": "$specrule",
+          "parameters": {
+            "DST_PEN": "1",
+            "DST_POL": "1",
+            "DST_WIDTH": "00000000000000000000000000000001",
+            "SRC_PEN": "0",
+            "SRC_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "TYPE": "$setup",
+            "T_LIMIT2_MAX": "00000000000000000000000000000000",
+            "T_LIMIT2_MIN": "00000000000000000000000000000000",
+            "T_LIMIT2_TYP": "00000000000000000000000000000000",
+            "T_LIMIT_MAX": "00000000000000000000000010000101",
+            "T_LIMIT_MIN": "00000000000000000000000010000101",
+            "T_LIMIT_TYP": "00000000000000000000000010000101"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1675.3-1675.33"
+          },
+          "port_directions": {
+            "DST": "input",
+            "DST_EN": "output",
+            "SRC": "input",
+            "SRC_EN": "output"
+          },
+          "connections": {
+            "DST": [ 32 ],
+            "DST_EN": [ "1" ],
+            "SRC": [ 34 ],
+            "SRC_EN": [ "1" ]
+          }
+        },
+        "$specify$98": {
+          "hide_name": 1,
+          "type": "$specify3",
+          "parameters": {
+            "DAT_DST_PEN": "0",
+            "DAT_DST_POL": "0",
+            "DST_WIDTH": "00000000000000000000000000010000",
+            "EDGE_EN": "1",
+            "EDGE_POL": "1",
+            "FULL": "1",
+            "SRC_DST_PEN": "0",
+            "SRC_DST_POL": "0",
+            "SRC_WIDTH": "00000000000000000000000000000001",
+            "T_FALL_MAX": "00000000000000000000100001100010",
+            "T_FALL_MIN": "00000000000000000000100001100010",
+            "T_FALL_TYP": "00000000000000000000100001100010",
+            "T_RISE_MAX": "00000000000000000000100001100010",
+            "T_RISE_MIN": "00000000000000000000100001100010",
+            "T_RISE_TYP": "00000000000000000000100001100010"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1677.3-1677.44"
+          },
+          "port_directions": {
+            "DAT": "input",
+            "DST": "input",
+            "EN": "input",
+            "SRC": "input"
+          },
+          "connections": {
+            "DAT": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+            "DST": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+            "EN": [ "1" ],
+            "SRC": [ 18 ]
+          }
+        }
+      },
+      "netnames": {
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1661$1267_Y": {
+          "hide_name": 1,
+          "bits": [ 78 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1661.33-1661.44"
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1663$1268_Y": {
+          "hide_name": 1,
+          "bits": [ 79 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1663.34-1663.45"
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1669$1269_Y": {
+          "hide_name": 1,
+          "bits": [ 80 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1669.34-1669.45"
+          }
+        },
+        "$logic_and$C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1673$1270_Y": {
+          "hide_name": 1,
+          "bits": [ 81 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1673.34-1673.45"
+          }
+        },
+        "MASK": {
+          "hide_name": 0,
+          "bits": [ 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61 ],
+          "attributes": {
+            "defaultvalue": "0000000000000000",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1497.16-1497.20"
+          }
+        },
+        "RADDR": {
+          "hide_name": 0,
+          "bits": [ 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1492.16-1492.21"
+          }
+        },
+        "RCLK": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1489.16-1489.20"
+          }
+        },
+        "RCLKE": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "defaultvalue": "1",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1490.16-1490.21"
+          }
+        },
+        "RDATA": {
+          "hide_name": 0,
+          "bits": [ 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1488.16-1488.21"
+          }
+        },
+        "RE": {
+          "hide_name": 0,
+          "bits": [ 20 ],
+          "attributes": {
+            "defaultvalue": "0",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1491.16-1491.18"
+          }
+        },
+        "WADDR": {
+          "hide_name": 0,
+          "bits": [ 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1496.16-1496.21"
+          }
+        },
+        "WCLK": {
+          "hide_name": 0,
+          "bits": [ 32 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1493.16-1493.20"
+          }
+        },
+        "WCLKE": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+            "defaultvalue": "1",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1494.16-1494.21"
+          }
+        },
+        "WDATA": {
+          "hide_name": 0,
+          "bits": [ 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77 ],
+          "attributes": {
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1498.16-1498.21"
+          }
+        },
+        "WE": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "defaultvalue": "0",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1495.16-1495.18"
           }
         }
       }
@@ -2534,7 +3811,6 @@
     "SB_CARRY": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:228.1-260.10"
       },
       "ports": {
@@ -2590,9 +3866,8 @@
     },
     "SB_DFF": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_flop": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:265.1-300.10"
       },
       "ports": {
@@ -2696,7 +3971,7 @@
     },
     "SB_DFFER": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000101",
+        "abc9_box_id": "00000000000000000000000000001110",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -2767,7 +4042,7 @@
     },
     "SB_DFFES": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000110",
+        "abc9_box_id": "00000000000000000000000000001111",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -3084,7 +4359,7 @@
     },
     "SB_DFFNER": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000000111",
+        "abc9_box_id": "00000000000000000000000000010000",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -3155,7 +4430,7 @@
     },
     "SB_DFFNES": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000001000",
+        "abc9_box_id": "00000000000000000000000000010001",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -3424,7 +4699,7 @@
     },
     "SB_DFFNS": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000001001",
+        "abc9_box_id": "00000000000000000000000000010010",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -3599,7 +4874,7 @@
     },
     "SB_DFFR": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000001010",
+        "abc9_box_id": "00000000000000000000000000010011",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -3658,7 +4933,7 @@
     },
     "SB_DFFS": {
       "attributes": {
-        "abc9_box_id": "00000000000000000000000000001011",
+        "abc9_box_id": "00000000000000000000000000010100",
         "blackbox": "00000000000000000000000000000001",
         "abc9_box": "00000000000000000000000000000001",
         "cells_not_processed": "00000000000000000000000000000001",
@@ -5351,9 +6626,8 @@
     },
     "SB_LUT4": {
       "attributes": {
-        "blackbox": "00000000000000000000000000000001",
         "abc9_lut": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
+        "blackbox": "00000000000000000000000000000001",
         "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:177.1-225.10"
       },
       "parameter_default_values": {
@@ -6636,7 +7910,6 @@
     "SB_RAM40_4K": {
       "attributes": {
         "blackbox": "00000000000000000000000000000001",
-        "cells_not_processed": "00000000000000000000000000000001",
         "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_sim.v:1487.1-1724.10"
       },
       "parameter_default_values": {
@@ -9982,19 +11255,19 @@
         },
         "LED1": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "LED2": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "LED3": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "0" ]
         },
         "LED4": {
           "direction": "output",
-          "bits": [ "x" ]
+          "bits": [ "1" ]
         },
         "S2_A": {
           "direction": "output",
@@ -10026,31 +11299,31 @@
         },
         "S1_A": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ 4 ]
         },
         "S1_B": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ 5 ]
         },
         "S1_C": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ 6 ]
         },
         "S1_D": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ 7 ]
         },
         "S1_E": {
           "direction": "output",
-          "bits": [ "1" ]
+          "bits": [ 8 ]
         },
         "S1_F": {
           "direction": "output",
-          "bits": [ "1" ]
+          "bits": [ 8 ]
         },
         "S1_G": {
           "direction": "output",
-          "bits": [ "0" ]
+          "bits": [ 9 ]
         }
       },
       "cells": {
@@ -10072,6 +11345,72 @@
           "connections": {
           }
         },
+        "CPU.clk_SB_DFF_Q": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 10 ],
+            "Q": [ 11 ]
+          }
+        },
+        "CPU.clk_SB_LUT4_I2": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 11 ],
+            "I3": [ 12 ],
+            "O": [ 10 ]
+          }
+        },
+        "CPU.clk_SB_LUT4_I2_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 13 ],
+            "CO": [ 12 ],
+            "I0": [ "0" ],
+            "I1": [ 14 ]
+          }
+        },
         "CW": {
           "hide_name": 0,
           "type": "$scopeinfo",
@@ -10081,7 +11420,7 @@
           "attributes": {
             "cell_module_not_derived": "00000000000000000000000000000001",
             "cell_src": "test_isa.v:55.5-60.5",
-            "module": "$paramod\\Clockworks\\SLOW=s32'00000000000000000000000000010011",
+            "module": "$paramod\\Clockworks\\SLOW=s32'00000000000000000000000000001010",
             "module_dynports": "00000000000000000000000000000001",
             "module_hdlname": "Clockworks",
             "module_src": "clockworks.v:1.1-15.10"
@@ -10089,6 +11428,624 @@
           "port_directions": {
           },
           "connections": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 15 ],
+            "Q": [ 14 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_1": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 16 ],
+            "Q": [ 17 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_1_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 17 ],
+            "I3": [ 18 ],
+            "O": [ 16 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_1_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 19 ],
+            "CO": [ 18 ],
+            "I0": [ "0" ],
+            "I1": [ 20 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_2": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 21 ],
+            "Q": [ 20 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_2_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 20 ],
+            "I3": [ 19 ],
+            "O": [ 21 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_2_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 22 ],
+            "CO": [ 19 ],
+            "I0": [ "0" ],
+            "I1": [ 23 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_3": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 24 ],
+            "Q": [ 23 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_3_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 23 ],
+            "I3": [ 22 ],
+            "O": [ 24 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_3_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 25 ],
+            "CO": [ 22 ],
+            "I0": [ "0" ],
+            "I1": [ 26 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_4": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 27 ],
+            "Q": [ 26 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_4_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 26 ],
+            "I3": [ 25 ],
+            "O": [ 27 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_4_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 28 ],
+            "CO": [ 25 ],
+            "I0": [ "0" ],
+            "I1": [ 29 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_5": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 30 ],
+            "Q": [ 29 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_5_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 29 ],
+            "I3": [ 28 ],
+            "O": [ 30 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_5_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 31 ],
+            "CO": [ 28 ],
+            "I0": [ "0" ],
+            "I1": [ 32 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_6": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 33 ],
+            "Q": [ 32 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_6_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 32 ],
+            "I3": [ 31 ],
+            "O": [ 33 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_6_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 34 ],
+            "CO": [ 31 ],
+            "I0": [ "0" ],
+            "I1": [ 35 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_7": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 36 ],
+            "Q": [ 35 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_7_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 35 ],
+            "I3": [ 34 ],
+            "O": [ 36 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_7_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 37 ],
+            "CO": [ 34 ],
+            "I0": [ "0" ],
+            "I1": [ 38 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_8": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 39 ],
+            "Q": [ 38 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_8_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 38 ],
+            "I3": [ 37 ],
+            "O": [ 39 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_9": {
+          "hide_name": 0,
+          "type": "SB_DFF",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:10.4-12.7|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/ff_map.v:2.51-2.90"
+          },
+          "port_directions": {
+            "C": "input",
+            "D": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "C": [ 2 ],
+            "D": [ 40 ],
+            "Q": [ 37 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_9_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:12.34-13.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ "0" ],
+            "I3": [ 37 ],
+            "O": [ 40 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_D_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0110100110010110"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:26.33-27.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 14 ],
+            "I3": [ 13 ],
+            "O": [ 15 ]
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_D_SB_LUT4_O_I3_SB_CARRY_CO": {
+          "hide_name": 0,
+          "type": "SB_CARRY",
+          "parameters": {
+          },
+          "attributes": {
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4"
+          },
+          "port_directions": {
+            "CI": "input",
+            "CO": "output",
+            "I0": "input",
+            "I1": "input"
+          },
+          "connections": {
+            "CI": [ 18 ],
+            "CO": [ 13 ],
+            "I0": [ "0" ],
+            "I1": [ 17 ]
           }
         },
         "Hex": {
@@ -10138,11 +12095,165 @@
             "cell_src": "test_isa.v:27.11-32.5",
             "module": "Memory",
             "module_hdlname": "Memory",
-            "module_src": "memory.v:2.1-26.10"
+            "module_src": "memory.v:1.1-47.10"
           },
           "port_directions": {
           },
           "connections": {
+          }
+        },
+        "RAM.MEM.0.0": {
+          "hide_name": 0,
+          "type": "SB_RAM40_4K",
+          "parameters": {
+            "INIT_0": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx0001100000000101010111101010011000001100110100100000110011110010000001000101001000010000000101001011100110101101000101010000010100000000110100100001000001010010",
+            "INIT_1": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_2": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_3": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_4": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_5": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_6": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_7": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_8": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_9": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_A": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_B": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_C": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_D": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_E": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "INIT_F": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+            "READ_MODE": "00",
+            "WRITE_MODE": "01"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/brams_map.v:204.532-204.765"
+          },
+          "port_directions": {
+            "MASK": "input",
+            "RADDR": "input",
+            "RCLK": "input",
+            "RCLKE": "input",
+            "RDATA": "output",
+            "RE": "input",
+            "WADDR": "input",
+            "WCLK": "input",
+            "WCLKE": "input",
+            "WDATA": "input",
+            "WE": "input"
+          },
+          "connections": {
+            "MASK": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "RADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "RCLK": [ 11 ],
+            "RCLKE": [ "1" ],
+            "RDATA": [ 7, 41, 42, 43, 44, 45, 46, 47, 5, 48, 49, 50, 51, 52, 53, 54 ],
+            "RE": [ "1" ],
+            "WADDR": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "WCLK": [ "0" ],
+            "WCLKE": [ "0" ],
+            "WDATA": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+            "WE": [ "1" ]
+          }
+        },
+        "S1_A_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011110000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:17.34-18.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 5 ],
+            "I3": [ 7 ],
+            "O": [ 4 ]
+          }
+        },
+        "S1_C_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "1111000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:17.34-18.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 5 ],
+            "I3": [ 7 ],
+            "O": [ 6 ]
+          }
+        },
+        "S1_E_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:12.34-13.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ "0" ],
+            "I3": [ 5 ],
+            "O": [ 8 ]
+          }
+        },
+        "S1_G_SB_LUT4_O": {
+          "hide_name": 0,
+          "type": "SB_LUT4",
+          "parameters": {
+            "LUT_INIT": "0000111100000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/cells_map.v:17.34-18.52"
+          },
+          "port_directions": {
+            "I0": "input",
+            "I1": "input",
+            "I2": "input",
+            "I3": "input",
+            "O": "output"
+          },
+          "connections": {
+            "I0": [ "0" ],
+            "I1": [ "0" ],
+            "I2": [ 5 ],
+            "I3": [ 7 ],
+            "O": [ 9 ]
           }
         }
       },
@@ -10202,6 +12313,28 @@
             "src": "processor.v:28.16-28.20"
           }
         },
+        "CPU.clk": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "CPU clk",
+            "src": "processor.v:2.18-2.21"
+          }
+        },
+        "CPU.clk_SB_DFF_Q_D": {
+          "hide_name": 0,
+          "bits": [ 10 ],
+          "attributes": {
+          }
+        },
+        "CPU.clk_SB_LUT4_I2_I3": {
+          "hide_name": 0,
+          "bits": [ 12 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
         "CPU.funct3": {
           "hide_name": 0,
           "bits": [ "x", "x", "x" ],
@@ -10236,10 +12369,19 @@
         },
         "CPU.mem_rdata": {
           "hide_name": 0,
-          "bits": [ "1", "1", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "0", "0", "x", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "1", "1", 7, 5, 44, 51, 42, 49, 46, 53, 41, 48, 45, 52, 43, 50, 47, 54, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "CPU mem_rdata",
-            "src": "processor.v:5.23-5.32"
+            "src": "processor.v:5.23-5.32",
+            "unused_bits": "4 5 6 7 8 9 10 11 12 13 14 15 16 17"
+          }
+        },
+        "CPU.mem_rstrb": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "CPU mem_rstrb",
+            "src": "processor.v:6.19-6.28"
           }
         },
         "CPU.rdId": {
@@ -10282,21 +12424,12 @@
             "src": "processor.v:98.14-98.19"
           }
         },
-        "CPU.x1": {
-          "hide_name": 0,
-          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
-          "attributes": {
-            "hdlname": "CPU x1",
-            "src": "processor.v:7.23-7.25"
-          }
-        },
         "CW.CLK": {
           "hide_name": 0,
           "bits": [ 2 ],
           "attributes": {
             "hdlname": "CW CLK",
-            "src": "clockworks.v:3.11-3.14",
-            "unused_bits": "0 "
+            "src": "clockworks.v:3.11-3.14"
           }
         },
         "CW.RESET": {
@@ -10308,12 +12441,152 @@
             "unused_bits": "0 "
           }
         },
+        "CW.clk": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "CW clk",
+            "src": "clockworks.v:5.11-5.14"
+          }
+        },
         "CW.resetn": {
           "hide_name": 0,
           "bits": [ "x" ],
           "attributes": {
             "hdlname": "CW resetn",
             "src": "clockworks.v:6.11-6.17"
+          }
+        },
+        "CW.slow_CLK": {
+          "hide_name": 0,
+          "bits": [ 37, 38, 35, 32, 29, 26, 23, 20, 17, 14, 11 ],
+          "attributes": {
+            "hdlname": "CW slow_CLK",
+            "src": "clockworks.v:9.17-9.25"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_1_D": {
+          "hide_name": 0,
+          "bits": [ 16 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_1_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 18 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_2_D": {
+          "hide_name": 0,
+          "bits": [ 21 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_2_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 19 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_3_D": {
+          "hide_name": 0,
+          "bits": [ 24 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_3_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 22 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_4_D": {
+          "hide_name": 0,
+          "bits": [ 27 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_4_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 25 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_5_D": {
+          "hide_name": 0,
+          "bits": [ 30 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_5_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 28 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_6_D": {
+          "hide_name": 0,
+          "bits": [ 33 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_6_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 31 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_7_D": {
+          "hide_name": 0,
+          "bits": [ 36 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_7_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 34 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_8_D": {
+          "hide_name": 0,
+          "bits": [ 39 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_9_D": {
+          "hide_name": 0,
+          "bits": [ 40 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_D": {
+          "hide_name": 0,
+          "bits": [ 15 ],
+          "attributes": {
+          }
+        },
+        "CW.slow_CLK_SB_DFF_Q_D_SB_LUT4_O_I3": {
+          "hide_name": 0,
+          "bits": [ 13 ],
+          "attributes": {
+            "abc9_carry": "00000000000000000000000000000001",
+            "src": "clockworks.v:11.19-11.31|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/arith_map.v:62.5-70.4|C:\\Users\\amosa\\APIO~1\\packages\\OSS-CA~1\\bin\\../share/yosys/ice40/abc9_model.v:4.9-4.11"
           }
         },
         "Hex.a_output": {
@@ -10382,7 +12655,7 @@
         },
         "HexB.a_output": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 4 ],
           "attributes": {
             "hdlname": "HexB a_output",
             "src": "hex_converter.v:3.11-3.19"
@@ -10390,7 +12663,7 @@
         },
         "HexB.b_output": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 5 ],
           "attributes": {
             "hdlname": "HexB b_output",
             "src": "hex_converter.v:4.11-4.19"
@@ -10398,7 +12671,7 @@
         },
         "HexB.bitin": {
           "hide_name": 0,
-          "bits": [ "1", "1", "0", "0" ],
+          "bits": [ "1", "1", 7, 5 ],
           "attributes": {
             "hdlname": "HexB bitin",
             "src": "hex_converter.v:2.16-2.21"
@@ -10406,7 +12679,7 @@
         },
         "HexB.c_output": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 6 ],
           "attributes": {
             "hdlname": "HexB c_output",
             "src": "hex_converter.v:5.11-5.19"
@@ -10414,7 +12687,7 @@
         },
         "HexB.d_output": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 7 ],
           "attributes": {
             "hdlname": "HexB d_output",
             "src": "hex_converter.v:6.11-6.19"
@@ -10422,7 +12695,7 @@
         },
         "HexB.e_output": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 8 ],
           "attributes": {
             "hdlname": "HexB e_output",
             "src": "hex_converter.v:7.11-7.19"
@@ -10430,7 +12703,7 @@
         },
         "HexB.f_output": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 8 ],
           "attributes": {
             "hdlname": "HexB f_output",
             "src": "hex_converter.v:8.11-8.19"
@@ -10438,7 +12711,7 @@
         },
         "HexB.g_output": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 9 ],
           "attributes": {
             "hdlname": "HexB g_output",
             "src": "hex_converter.v:9.11-9.19"
@@ -10446,28 +12719,28 @@
         },
         "LED1": {
           "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "0" ],
           "attributes": {
             "src": "test_isa.v:4.12-4.16"
           }
         },
         "LED2": {
           "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "0" ],
           "attributes": {
             "src": "test_isa.v:5.12-5.16"
           }
         },
         "LED3": {
           "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "0" ],
           "attributes": {
             "src": "test_isa.v:6.12-6.16"
           }
         },
         "LED4": {
           "hide_name": 0,
-          "bits": [ "x" ],
+          "bits": [ "1" ],
           "attributes": {
             "src": "test_isa.v:7.12-7.16"
           }
@@ -10481,51 +12754,144 @@
             "src": "riscv_assembly.vh:604.12-604.20"
           }
         },
-        "RAM.BNE$func$memory.v:16$591.imm": {
+        "RAM.BNE$func$memory.v:36$604.imm": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
-            "hdlname": "RAM BNE$func$memory.v:16$591.imm",
+            "hdlname": "RAM BNE$func$memory.v:36$604.imm",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:321.17-321.20"
           }
         },
-        "RAM.BType$func$riscv_assembly.vh:323$592.imm": {
+        "RAM.BType$func$riscv_assembly.vh:323$605.imm": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
-            "hdlname": "RAM BType$func$riscv_assembly.vh:323$592.imm",
+            "hdlname": "RAM BType$func$riscv_assembly.vh:323$605.imm",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:301.17-301.20"
           }
         },
+        "RAM.JAL$func$memory.v:26$589.imm": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "RAM JAL$func$memory.v:26$589.imm",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:274.17-274.20"
+          }
+        },
+        "RAM.JAL$func$memory.v:27$592.imm": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "RAM JAL$func$memory.v:27$592.imm",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:274.17-274.20"
+          }
+        },
+        "RAM.JType$func$riscv_assembly.vh:276$590.imm": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "RAM JType$func$riscv_assembly.vh:276$590.imm",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:265.17-265.20"
+          }
+        },
+        "RAM.JType$func$riscv_assembly.vh:276$593.imm": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "attributes": {
+            "hdlname": "RAM JType$func$riscv_assembly.vh:276$593.imm",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:265.17-265.20"
+          }
+        },
         "RAM.L0_": {
           "hide_name": 0,
-          "bits": [ "0", "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "bits": [ "0", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
           "signed": 1,
           "attributes": {
             "hdlname": "RAM L0_",
-            "src": "memory.v:11.12-11.15"
+            "src": "memory.v:18.12-18.15"
           }
         },
-        "RAM.Label$func$memory.v:15$587.L": {
+        "RAM.L1_": {
+          "hide_name": 0,
+          "bits": [ "0", "0", "1", "1", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM L1_",
+            "src": "memory.v:20.12-20.15"
+          }
+        },
+        "RAM.Label$func$memory.v:24$585.L": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "signed": 1,
           "attributes": {
-            "hdlname": "RAM Label$func$memory.v:15$587.L",
+            "hdlname": "RAM Label$func$memory.v:24$585.L",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:607.21-607.22"
           }
         },
-        "RAM.LabelRef$func$memory.v:16$590.L": {
+        "RAM.Label$func$memory.v:31$595.L": {
           "hide_name": 0,
           "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "signed": 1,
           "attributes": {
-            "hdlname": "RAM LabelRef$func$memory.v:16$590.L",
+            "hdlname": "RAM Label$func$memory.v:31$595.L",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:607.21-607.22"
+          }
+        },
+        "RAM.Label$func$memory.v:34$600.L": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM Label$func$memory.v:34$600.L",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:607.21-607.22"
+          }
+        },
+        "RAM.LabelRef$func$memory.v:26$588.L": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM LabelRef$func$memory.v:26$588.L",
             "nosync": "00000000000000000000000000000001",
             "src": "riscv_assembly.vh:624.21-624.22"
+          }
+        },
+        "RAM.LabelRef$func$memory.v:27$591.L": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM LabelRef$func$memory.v:27$591.L",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:624.21-624.22"
+          }
+        },
+        "RAM.LabelRef$func$memory.v:36$603.L": {
+          "hide_name": 0,
+          "bits": [ "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM LabelRef$func$memory.v:36$603.L",
+            "nosync": "00000000000000000000000000000001",
+            "src": "riscv_assembly.vh:624.21-624.22"
+          }
+        },
+        "RAM.clk": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "hdlname": "RAM clk",
+            "src": "memory.v:2.22-2.25"
           }
         },
         "RAM.memPC": {
@@ -10542,62 +12908,80 @@
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
           "attributes": {
             "hdlname": "RAM mem_addr",
-            "src": "memory.v:4.22-4.30"
+            "src": "memory.v:3.22-3.30"
           }
         },
         "RAM.mem_rdata": {
           "hide_name": 0,
-          "bits": [ "1", "1", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "0", "0", "x", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "1", "1", 7, 5, 44, 51, 42, 49, 46, 53, 41, 48, 45, 52, 43, 50, 47, 54, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
             "hdlname": "RAM mem_rdata",
-            "src": "memory.v:5.22-5.31"
+            "src": "memory.v:4.22-4.31",
+            "unused_bits": "4 5 6 7 8 9 10 11 12 13 14 15 16 17"
+          }
+        },
+        "RAM.mem_rstrb": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "hdlname": "RAM mem_rstrb",
+            "src": "memory.v:5.18-5.27"
+          }
+        },
+        "RAM.wait_": {
+          "hide_name": 0,
+          "bits": [ "0", "0", "1", "0", "1", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
+          "signed": 1,
+          "attributes": {
+            "hdlname": "RAM wait_",
+            "src": "memory.v:19.12-19.17"
           }
         },
         "S1_A": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 4 ],
           "attributes": {
             "src": "test_isa.v:15.12-15.16"
           }
         },
         "S1_B": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 5 ],
           "attributes": {
             "src": "test_isa.v:16.12-16.16"
           }
         },
         "S1_C": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 6 ],
           "attributes": {
             "src": "test_isa.v:17.12-17.16"
           }
         },
         "S1_D": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 7 ],
           "attributes": {
             "src": "test_isa.v:18.12-18.16"
           }
         },
         "S1_E": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 8 ],
           "attributes": {
             "src": "test_isa.v:19.12-19.16"
           }
         },
         "S1_F": {
           "hide_name": 0,
-          "bits": [ "1" ],
+          "bits": [ 8 ],
           "attributes": {
             "src": "test_isa.v:20.12-20.16"
           }
         },
         "S1_G": {
           "hide_name": 0,
-          "bits": [ "0" ],
+          "bits": [ 9 ],
           "attributes": {
             "src": "test_isa.v:21.12-21.16"
           }
@@ -10658,6 +13042,13 @@
             "src": "test_isa.v:3.12-3.15"
           }
         },
+        "clk": {
+          "hide_name": 0,
+          "bits": [ 11 ],
+          "attributes": {
+            "src": "test_isa.v:24.12-24.15"
+          }
+        },
         "mem_addr": {
           "hide_name": 0,
           "bits": [ "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0", "0" ],
@@ -10667,9 +13058,17 @@
         },
         "mem_rdata": {
           "hide_name": 0,
-          "bits": [ "1", "1", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "0", "0", "x", "0", "0", "0", "0", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
+          "bits": [ "1", "1", 7, 5, 44, 51, 42, 49, 46, 53, 41, 48, 45, 52, 43, 50, 47, 54, "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x", "x" ],
           "attributes": {
-            "src": "test_isa.v:35.16-35.25"
+            "src": "test_isa.v:35.16-35.25",
+            "unused_bits": "4 5 6 7 8 9 10 11 12 13 14 15 16 17"
+          }
+        },
+        "mem_rstrb": {
+          "hide_name": 0,
+          "bits": [ "1" ],
+          "attributes": {
+            "src": "test_isa.v:36.9-36.18"
           }
         },
         "resetn": {
@@ -10677,12 +13076,6 @@
           "bits": [ "x" ],
           "attributes": {
             "src": "test_isa.v:25.12-25.18"
-          }
-        },
-        "x1": {
-          "hide_name": 0,
-          "bits": [ "x", "x", "x", "x" ],
-          "attributes": {
           }
         }
       }
