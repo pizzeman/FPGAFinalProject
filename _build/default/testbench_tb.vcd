@@ -1,5 +1,5 @@
 $date
-	Wed Nov 05 11:29:12 2025
+	Wed Nov 05 18:48:11 2025
 $end
 $version
 	Icarus Verilog
@@ -11,140 +11,162 @@ $scope module testbench $end
 $var reg 1 ! CLK $end
 $var reg 1 " reset $end
 $scope module dut $end
-$var wire 32 # aluIn1 [31:0] $end
+$var wire 1 # LOAD_sign $end
+$var wire 32 $ aluIn1 [31:0] $end
 $var wire 1 ! clk $end
-$var wire 32 $ mem_addr [31:0] $end
 $var wire 32 % mem_rdata [31:0] $end
+$var wire 1 & mem_rstrb $end
 $var wire 1 " resetn $end
-$var wire 1 & writeBackEn $end
-$var wire 32 ' writeBackData [31:0] $end
-$var wire 5 ( shamt [4:0] $end
-$var wire 5 ) rs2Id [4:0] $end
-$var wire 5 * rs1Id [4:0] $end
-$var wire 5 + rdId [4:0] $end
-$var wire 32 , nextPC [31:0] $end
-$var wire 1 - mem_rstrb $end
-$var wire 1 . isStore $end
-$var wire 1 / isSYSTEM $end
-$var wire 1 0 isLoad $end
-$var wire 1 1 isLUI $end
-$var wire 1 2 isJALR $end
-$var wire 1 3 isJAL $end
-$var wire 1 4 isBranch $end
-$var wire 1 5 isAUIPC $end
-$var wire 1 6 isALUreg $end
-$var wire 1 7 isALUimm $end
-$var wire 7 8 funct7 [6:0] $end
-$var wire 3 9 funct3 [2:0] $end
-$var wire 32 : aluIn2 [31:0] $end
-$var wire 32 ; Uimm [31:0] $end
-$var wire 32 < Simm [31:0] $end
-$var wire 32 = Jimm [31:0] $end
-$var wire 32 > Iimm [31:0] $end
-$var wire 32 ? Bimm [31:0] $end
-$var parameter 32 @ EXECUTE $end
-$var parameter 32 A FETCH_INSTR $end
-$var parameter 32 B FETCH_REGS $end
-$var parameter 32 C WAIT_INSTR $end
-$var reg 32 D PC [31:0] $end
-$var reg 32 E aluOut [31:0] $end
-$var reg 32 F instr [31:0] $end
-$var reg 32 G rs1 [31:0] $end
-$var reg 32 H rs2 [31:0] $end
-$var reg 2 I state [1:0] $end
-$var reg 1 J takeBranch $end
-$var reg 32 K x1 [31:0] $end
+$var wire 1 ' writeBackEn $end
+$var wire 32 ( writeBackData [31:0] $end
+$var wire 5 ) shamt [4:0] $end
+$var wire 5 * rs2Id [4:0] $end
+$var wire 5 + rs1Id [4:0] $end
+$var wire 5 , rdId [4:0] $end
+$var wire 32 - nextPC [31:0] $end
+$var wire 1 . mem_halfwordAccess $end
+$var wire 1 / mem_byteAccess $end
+$var wire 32 0 mem_addr [31:0] $end
+$var wire 32 1 loadstore_addr [31:0] $end
+$var wire 1 2 isStore $end
+$var wire 1 3 isSYSTEM $end
+$var wire 1 4 isLoad $end
+$var wire 1 5 isLUI $end
+$var wire 1 6 isJALR $end
+$var wire 1 7 isJAL $end
+$var wire 1 8 isBranch $end
+$var wire 1 9 isAUIPC $end
+$var wire 1 : isALUreg $end
+$var wire 1 ; isALUimm $end
+$var wire 7 < funct7 [6:0] $end
+$var wire 3 = funct3 [2:0] $end
+$var wire 32 > aluIn2 [31:0] $end
+$var wire 32 ? Uimm [31:0] $end
+$var wire 32 @ Simm [31:0] $end
+$var wire 16 A LOAD_halfword [15:0] $end
+$var wire 32 B LOAD_data [31:0] $end
+$var wire 8 C LOAD_byte [7:0] $end
+$var wire 32 D Jimm [31:0] $end
+$var wire 32 E Iimm [31:0] $end
+$var wire 32 F Bimm [31:0] $end
+$var parameter 32 G EXECUTE $end
+$var parameter 32 H FETCH_INSTR $end
+$var parameter 32 I FETCH_REGS $end
+$var parameter 32 J LOAD $end
+$var parameter 32 K WAIT_DATA $end
+$var parameter 32 L WAIT_INSTR $end
+$var reg 32 M PC [31:0] $end
+$var reg 32 N aluOut [31:0] $end
+$var reg 32 O instr [31:0] $end
+$var reg 32 P rs1 [31:0] $end
+$var reg 32 Q rs2 [31:0] $end
+$var reg 3 R state [2:0] $end
+$var reg 1 S takeBranch $end
+$var reg 32 T x10 [31:0] $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
 $comment Show the parameter values. $end
 $dumpall
-b1 C
-b10 B
-b0 A
-b11 @
+b1 L
+b101 K
+b100 J
+b10 I
+b0 H
+b11 G
 $end
 #0
 $dumpvars
-bx K
-xJ
-b0 I
-bx H
-bx G
-bx F
+bx T
+xS
+b0 R
+bx Q
+bx P
+bx O
+bx N
+b0 M
+bx0 F
 bx E
-b0 D
-bx0 ?
+bx0 D
+bz C
+bxzzzzzzzz B
+bz A
+bx @
+bx000000000000 ?
 bx >
-bx0 =
+bx =
 bx <
-bx000000000000 ;
-bx :
-bx 9
-bx 8
+x;
+x:
+x9
+x8
 x7
 x6
 x5
 x4
 x3
 x2
-x1
-x0
+bx 1
+b0 0
 x/
 x.
-1-
+bx -
 bx ,
 bx +
 bx *
 bx )
 bx (
-bx '
-0&
+0'
+1&
 bz %
-b0 $
-bx #
+bx $
+x#
 1"
 0!
 $end
 #20000
-0-
-b1 I
 1!
 #40000
 0!
 #60000
-bz0 ?
-bz0 =
-bz000000000000 ;
-bz >
-bz <
-0J
-bz *
-bz )
-bz +
-bz 9
-bz 8
-b10 I
-bz F
 1!
 #80000
 0!
 #100000
-1-
-b0 I
+0&
+b1 R
 1!
 0"
 #120000
 0!
 #140000
+bx 0
+bz0 F
+bz0 D
+bz000000000000 ?
+bz E
+bz @
+0S
+bz +
+bz *
+bz ,
+bz =
+bz <
+b10 R
+bz O
 1!
 #160000
 0!
 #180000
+x'
+b11 R
 1!
 #200000
 0!
 #220000
+0'
+x&
+bx00 R
 1!
 #240000
 0!

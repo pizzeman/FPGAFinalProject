@@ -1,4 +1,4 @@
-module Clockworks #(parameter SLOW = 0)
+module Clockworks 
 (
    input  CLK,   // clock pin of the board
    input  RESET, // reset pin of the board
@@ -6,10 +6,10 @@ module Clockworks #(parameter SLOW = 0)
    output resetn // (optionally timed) negative reset for the design (more on this later)
 );
 
-   reg [SLOW:0] slow_CLK = 0;
+   reg slow_CLK = 0;
    always @(posedge CLK) begin
       slow_CLK <= slow_CLK + 1;
    end
-   assign clk = slow_CLK[SLOW];
+   assign clk = slow_CLK;
 
 endmodule

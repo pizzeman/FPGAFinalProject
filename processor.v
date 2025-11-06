@@ -1,10 +1,12 @@
 module Processor (
     input 	      clk,
     input 	      resetn,
-    output     [31:0] mem_addr, 
-    input      [31:0] mem_rdata, 
+    output [31:0]     mem_addr, 
+    input [31:0]      mem_rdata, 
     output 	      mem_rstrb,
-    output reg [31:0] x1		  
+    output [31:0]     mem_wdata,
+    output [3:0]      mem_wmask,
+    output reg [31:0] x10 = 0		  
 );
 
    reg [31:0] PC=0;        // program counter
@@ -58,10 +60,39 @@ module Processor (
 
    // The ALU
    wire [31:0] aluIn1 = rs1;
-   wire [31:0] aluIn2 = isALUreg ? rs2 : Iimm;
-   reg [31:0] aluOut;
+   wire [31:0] aluIn2 = isALUreg | isBranch ? rs2 : Iimm;
+
    wire [4:0] shamt = isALUreg ? rs2[4:0] : instr[24:20]; // shift amount
 
+   // The adder is used by both arithmetic instructions and JALR.
+   wire [31:0] aluPlus = aluIn1 + aluIn2;
+
+   // Use a single 33 bits subtract to do subtraction and all comparisons
+   // (trick borrowed from swapforth/J1)
+   wire [32:0] aluMinus = {1'b1, ~aluIn2} + {1'b0,aluIn1} + 33'b1;
+   wire        LT  = (aluIn1[31] ^ aluIn2[31]) ? aluIn1[31] : aluMinus[32];
+   wire        LTU = aluMinus[32];
+   wire        EQ  = (aluMinus[31:0] == 0);
+
+   // Flip a 32 bit word. Used by the shifter (a single shifter for
+   // left and right shifts, saves silicium !)
+   function [31:0] flip32;
+      input [31:0] x;
+      flip32 = {x[ 0], x[ 1], x[ 2], x[ 3], x[ 4], x[ 5], x[ 6], x[ 7], 
+		x[ 8], x[ 9], x[10], x[11], x[12], x[13], x[14], x[15], 
+		x[16], x[17], x[18], x[19], x[20], x[21], x[22], x[23],
+		x[24], x[25], x[26], x[27], x[28], x[29], x[30], x[31]};
+   endfunction
+
+   wire [31:0] shifter_in = (funct3 == 3'b001) ? flip32(aluIn1) : aluIn1;
+   
+   /* verilator lint_off WIDTH */
+   wire [31:0] shifter = 
+               $signed({instr[30] & aluIn1[31], shifter_in}) >>> aluIn2[4:0];
+   /* verilator lint_on WIDTH */
+
+   wire [31:0] leftshift = flip32(shifter);
+   
    // ADD/SUB/ADDI: 
    // funct7[5] is 1 for SUB and 0 for ADD. We need also to test instr[5]
    // to make the difference with ADDI
@@ -99,47 +130,113 @@ module Processor (
       endcase
    end
    
+
+   // Address computation
+   // An adder used to compute branch address, JAL address and AUIPC.
+   // branch->PC+Bimm    AUIPC->PC+Uimm    JAL->PC+Jimm
+   // Equivalent to PCplusImm = PC + (isJAL ? Jimm : isAUIPC ? Uimm : Bimm)
+   wire [31:0] PCplusImm = PC + ( instr[3] ? Jimm[31:0] :
+				  instr[4] ? Uimm[31:0] :
+				             Bimm[31:0] );
+   wire [31:0] PCplus4 = PC+4;
+   
+   wire [31:0] nextPC = ((isBranch && takeBranch) || isJAL) ? PCplusImm   :
+	                                  isJALR   ? {aluPlus[31:1],1'b0} :
+	                                             PCplus4;
+
+   wire [31:0] loadstore_addr = rs1 + (isStore ? Simm : Iimm);
+
+
+   // register write back
+   assign writeBackData = (isJAL || isJALR) ? PCplus4   :
+			      isLUI         ? Uimm      :
+			      isAUIPC       ? PCplusImm :
+			      isLoad        ? LOAD_data :
+			                      aluOut;
+
+                                        // this one just for display ---.
+                                        //                              v
+   assign writeBackEn = (state==EXECUTE && !isBranch && !isStore && !isLoad) ||
+			(state==WAIT_DATA) ;
+   
+   
+   // Load
+   // All memory accesses are aligned on 32 bits boundary. For this
+   // reason, we need some circuitry that does unaligned halfword
+   // and byte load/store, based on:
+   // - funct3[1:0]:  00->byte 01->halfword 10->word
+   // - mem_addr[1:0]: indicates which byte/halfword is accessed
+
+   wire mem_byteAccess     = funct3[1:0] == 2'b00;
+   wire mem_halfwordAccess = funct3[1:0] == 2'b01;
+
+
+   wire [15:0] LOAD_halfword =
+	       loadstore_addr[1] ? mem_rdata[31:16] : mem_rdata[15:0];
+
+   wire  [7:0] LOAD_byte =
+	       loadstore_addr[0] ? LOAD_halfword[15:8] : LOAD_halfword[7:0];
+
+   // LOAD, in addition to funct3[1:0], LOAD depends on:
+   // - funct3[2] (instr[14]): 0->do sign expansion   1->no sign expansion
+   wire LOAD_sign =
+	!funct3[2] & (mem_byteAccess ? LOAD_byte[7] : LOAD_halfword[15]);
+
+   wire [31:0] LOAD_data =
+         mem_byteAccess ? {{24{LOAD_sign}},     LOAD_byte} :
+     mem_halfwordAccess ? {{16{LOAD_sign}}, LOAD_halfword} :
+                          mem_rdata ;
+
+   // Store
+   // ------------------------------------------------------------------------
+
+   assign mem_wdata[ 7: 0] = rs2[7:0];
+   assign mem_wdata[15: 8] = loadstore_addr[0] ? rs2[7:0]  : rs2[15: 8];
+   assign mem_wdata[23:16] = loadstore_addr[1] ? rs2[7:0]  : rs2[23:16];
+   assign mem_wdata[31:24] = loadstore_addr[0] ? rs2[7:0]  :
+			     loadstore_addr[1] ? rs2[15:8] : rs2[31:24];
+
+   // The memory write mask:
+   //    1111                     if writing a word
+   //    0011 or 1100             if writing a halfword
+   //                                (depending on loadstore_addr[1])
+   //    0001, 0010, 0100 or 1000 if writing a byte
+   //                                (depending on loadstore_addr[1:0])
+
+   wire [3:0] STORE_wmask =
+	      mem_byteAccess      ?
+	            (loadstore_addr[1] ?
+		          (loadstore_addr[0] ? 4'b1000 : 4'b0100) :
+		          (loadstore_addr[0] ? 4'b0010 : 4'b0001)
+                    ) :
+	      mem_halfwordAccess ?
+	            (loadstore_addr[1] ? 4'b1100 : 4'b0011) :
+              4'b1111;
+
+   
+   
    // The state machine
    localparam FETCH_INSTR = 0;
    localparam WAIT_INSTR  = 1;
    localparam FETCH_REGS  = 2;
    localparam EXECUTE     = 3;
-   reg [1:0] state = FETCH_INSTR;
-
-   // register write back
-   assign writeBackData = (isJAL || isJALR) ? (PC + 4) :
-			  (isLUI) ? Uimm :
-			  (isAUIPC) ? (PC + Uimm) : 
-			  aluOut;
-   
-   assign writeBackEn = (state == EXECUTE && 
-			 (isALUreg || 
-			  isALUimm || 
-			  isJAL    || 
-			  isJALR   ||
-			  isLUI    ||
-			  isAUIPC)
-			 );
-   // next PC
-   wire [31:0] nextPC = (isBranch && takeBranch) ? PC+Bimm  :	       
-   	                isJAL                    ? PC+Jimm  :
-	                isJALR                   ? rs1+Iimm :
-	                PC+4;
+   localparam LOAD        = 4;
+   localparam WAIT_DATA   = 5;
+   localparam STORE       = 6;
+   reg [2:0] state = FETCH_INSTR;
    
    always @(posedge clk) begin
-      if(!resetn) begin
+      if(resetn) begin
 	 PC    <= 0;
 	 state <= FETCH_INSTR;
       end else begin
 	 if(writeBackEn && rdId != 0) begin
 	    RegisterBank[rdId] <= writeBackData;
+	    // $display("r%0d <= %b",rdId,writeBackData);
 	    // For displaying what happens.
-	    if(rdId == 1) begin
-	       x1 <= writeBackData;
+	    if(rdId == 10) begin
+	       x10 <= writeBackData;
 	    end
-`ifdef BENCH	 
-	    $display("x%0d <= %b",rdId,writeBackData);
-`endif	 
 	 end
 	 case(state)
 	   FETCH_INSTR: begin
@@ -158,44 +255,30 @@ module Processor (
 	      if(!isSYSTEM) begin
 		 PC <= nextPC;
 	      end
-	      state <= FETCH_INSTR;
+	      state <= isLoad  ? LOAD  : 
+		       isStore ? STORE : 
+		       FETCH_INSTR;
 `ifdef BENCH      
 	      if(isSYSTEM) $finish();
 `endif      
+	   end
+	   LOAD: begin
+	      state <= WAIT_DATA;
+	   end
+	   WAIT_DATA: begin
+	      state <= FETCH_INSTR;
+	   end
+	   STORE: begin
+	      state <= FETCH_INSTR;
 	   end
 	 endcase 
       end
    end
 
-   assign mem_addr = PC;
-   assign mem_rstrb = (state == FETCH_INSTR);
    
-`ifdef BENCH
-   always @(posedge clk) begin
-      if(state == FETCH_REGS) begin
-	 case (1'b1)
-	   isALUreg: $display(
-			      "ALUreg rd=%d rs1=%d rs2=%d funct3=%b",
-			      rdId, rs1Id, rs2Id, funct3
-			      );
-	   isALUimm: $display(
-			      "ALUimm rd=%d rs1=%d imm=%0d funct3=%b",
-			      rdId, rs1Id, Iimm, funct3
-			      );
-	   isBranch: $display("BRANCH rs1=%0d rs2=%0d",rs1Id, rs2Id);
-	   isJAL:    $display("JAL");
-	   isJALR:   $display("JALR");
-	   isAUIPC:  $display("AUIPC");
-	   isLUI:    $display("LUI");	
-	   isLoad:   $display("LOAD");
-	   isStore:  $display("STORE");
-	   isSYSTEM: $display("SYSTEM");
-	 endcase 
-	 if(isSYSTEM) begin
-	    $finish();
-	 end
-      end 
-   end
-`endif	      
+   assign mem_addr = (state == WAIT_INSTR || state == FETCH_INSTR) ?
+		     PC : loadstore_addr ;
+   assign mem_rstrb = (state == FETCH_INSTR || state == LOAD);
+   assign mem_wmask = {4{(state == STORE)}} & STORE_wmask;
    
 endmodule

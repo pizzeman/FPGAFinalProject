@@ -27,32 +27,36 @@ module SOC (
    wire [31:0] mem_addr;
    wire [31:0] mem_rdata;
    wire mem_rstrb;
-   wire [31:0] x1;
+   wire [31:0] x10;
+
+   assign resetn = SW1;
 
    Memory RAM(
-      .clk(clk),
+      .clk(CLK),
       .mem_addr(mem_addr),
       .mem_rdata(mem_rdata),
-      .mem_rstrb(mem_rstrb)
+      .mem_rstrb(mem_rstrb),
+      .mem_wdata(mem_wdata),
+      .mem_wmask(mem_wmask)
    );
 
    Processor CPU(
-      .clk(clk),
+      .clk(CLK),
       .resetn(resetn),		 
       .mem_addr(mem_addr),
       .mem_rdata(mem_rdata),
       .mem_rstrb(mem_rstrb),
-      .x1(x1)		 
+      .mem_wdata(mem_wdata),
+      .mem_wmask(mem_wmask),		 
+      .x10(x10)			 
    );
-   assign LED1 = mem_addr[0];
-   assign LED2 = mem_addr[1];
-   assign LED3 = mem_addr[2];
-   assign LED4 = mem_addr[3];
+   assign LED1 = x10[0];
+   assign LED2 = x10[1];
+   assign LED3 = x10[2];
+   assign LED4 = x10[3];
 
    // Gearbox and reset circuitry.
-   Clockworks #(
-     .SLOW(19) // Divide clock frequency by 2^19
-   )CW(
+   Clockworks CW(
      .CLK(CLK),
      .RESET(SW1),
      .clk(clk),
